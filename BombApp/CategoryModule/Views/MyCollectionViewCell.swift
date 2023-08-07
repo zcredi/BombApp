@@ -20,7 +20,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private lazy var selectButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("", for: .normal)

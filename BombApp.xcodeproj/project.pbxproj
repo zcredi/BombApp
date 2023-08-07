@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
-		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/UIConstants/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4087EC482A819CC70096A55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		40CA79692A81885200B392ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				40CA79692A81885200B392ED /* Model */,
-				868D15F32A80DCE900C6D712 /* Views */,
+				4087EC482A819CC70096A55C /* Views */,
 				868D15EE2A80DCCF00C6D712 /* Controllers */,
 			);
 			path = CategoryModule;
@@ -222,14 +230,6 @@
 		868D15F22A80DCE300C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		868D15F32A80DCE900C6D712 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
