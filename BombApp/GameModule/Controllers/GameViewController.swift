@@ -30,8 +30,8 @@ extension GameViewController {
         
             gameStartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             gameStartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            gameStartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            gameStartView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            gameStartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            gameStartView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
         ])
     }
 }

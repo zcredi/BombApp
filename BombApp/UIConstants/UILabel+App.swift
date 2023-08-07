@@ -14,8 +14,9 @@ extension UILabel {
         self.text = text
         self.font = font
         textColor = color
-        numberOfLines = 3
+        numberOfLines = 0
         textAlignment = .center
+        adjustsFontSizeToFitWidth = true
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
