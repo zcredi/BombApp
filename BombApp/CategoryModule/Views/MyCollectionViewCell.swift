@@ -1,7 +1,13 @@
 import UIKit
 
+protocol MyCollectionViewCellDelegate: NSObject {
+    func didSelectItem(_ button: UIButton)
+}
+
 class MyCollectionViewCell: UICollectionViewCell {
     static let identifier = "MyCell"
+    
+    weak var delegate: MyCollectionViewCellDelegate?
 
     private lazy var myImageView: UIImageView = {
         let imageView = UIImageView()
@@ -20,12 +26,12 @@ class MyCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private lazy var selectButton: UIButton = {
+
+    lazy var selectButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("", for: .normal)
         let configuration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular)
-        let image = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.setImage(image?.withConfiguration(configuration), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -41,8 +47,8 @@ class MyCollectionViewCell: UICollectionViewCell {
             selectButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             selectButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             myImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            myImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40),
-            myImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40),
+            myImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50),
+            myImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
             myImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.6),
 
             myLabel.topAnchor.constraint(equalTo: myImageView.bottomAnchor),
@@ -52,9 +58,13 @@ class MyCollectionViewCell: UICollectionViewCell {
         ])
     }
 
-    @available(*, unavailable)
+  
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func toggleSelectionState() {
+        delegate?.didSelectItem(selectButton)
     }
 
     func configure(with image: UIImage, title: String) {

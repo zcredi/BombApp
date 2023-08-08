@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3EB2A815F01002B326C /* BackgroundColor.swift */; };
 		4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */; };
+		40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */; };
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
 				4093C3EB2A815F01002B326C /* BackgroundColor.swift */,
+				40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */,
 			);
 			path = UIConstants;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */,
 				868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
+				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
 				4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
