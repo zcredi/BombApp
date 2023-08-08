@@ -14,7 +14,9 @@ extension UILabel {
         self.text = text
         self.font = font
         textColor = color
-        numberOfLines = 0
+        shadowColor = .blackColor
+        shadowOffset = CGSize(width: -0.5, height: -0.5)
+        numberOfLines = 3
         textAlignment = .center
         adjustsFontSizeToFitWidth = true
         translatesAutoresizingMaskIntoConstraints = false

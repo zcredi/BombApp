@@ -9,25 +9,23 @@ import UIKit
 
 class GameStartView: UIView {
     
-    let titleLabel = UILabel(text: "Игра",
+    private let titleLabel = UILabel(text: "Игра",
                              font: UIFont.delaGothicOneRegular30()!,
                              color: .purpleColor)
-    let gameLabel = UILabel(text: "Нажмите “Запустить” чтобы начать игру",
-                             font: UIFont.delaGothicOneRegular28()!,
+    private let gameLabel = UILabel(text: "Нажмите “Запустить” чтобы начать игру",
+                             font: UIFont.delaGothicOneRegular32()!,
                              color: .purpleColor)
     
-    let backButton = BackButton()
-    let stopButton = StopButton()
-    let startButton = PurpleButton(text: "Запустить")
+    private let backButton = BackButton()
+    private let stopButton = StopButton()
+    private let startButton = PurpleButton(text: "Запустить")
     
-    let bombImageView: UIImageView = {
+    private let bombImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "gameBomb")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
-//    let stackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -46,11 +44,6 @@ class GameStartView: UIView {
         addSubview(backButton)
         addSubview(titleLabel)
         addSubview(stopButton)
-//        stackView = UIStackView(arrangedSubviews: [gameLabel, bombImageView, startButton],
-//                                axis: .vertical,
-//                                spacing: .10)
-//        stackView.distribution = .fillProportionally
-//        addSubview(stackView)
         addSubview(gameLabel)
         addSubview(bombImageView)
         addSubview(startButton)
@@ -69,6 +62,7 @@ extension GameStartView {
             titleLabel.heightAnchor.constraint(equalToConstant: 40),
             titleLabel.widthAnchor.constraint(equalToConstant: 92),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             
             stopButton.heightAnchor.constraint(equalToConstant: 38),
             stopButton.widthAnchor.constraint(equalToConstant: 37),
@@ -88,7 +82,7 @@ extension GameStartView {
             startButton.heightAnchor.constraint(equalToConstant: 80),
             startButton.widthAnchor.constraint(equalToConstant: 275),
             startButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            startButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40)
+            startButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    let gameStartView = GameStartView()
+    private let gameStartView = GameStartView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
