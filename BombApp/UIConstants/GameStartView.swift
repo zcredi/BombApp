@@ -10,10 +10,10 @@ import UIKit
 class GameStartView: UIView {
     
     private let titleLabel = UILabel(text: "Игра",
-                             font: UIFont.delaGothicOneRegular30()!,
+                                     font: .delaGothicOneRegular30(),
                              color: .purpleColor)
     private let gameLabel = UILabel(text: "Нажмите “Запустить” чтобы начать игру",
-                             font: UIFont.delaGothicOneRegular32()!,
+                                    font: .delaGothicOneRegular32(),
                              color: .purpleColor)
     
     private let backButton = BackButton()

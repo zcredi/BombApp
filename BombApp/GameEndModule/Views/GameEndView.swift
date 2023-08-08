@@ -10,16 +10,16 @@ import UIKit
 class GameEndView: UIView {
     
     private let titleLabel = UILabel(text: "Игра",
-                             font: UIFont.delaGothicOneRegular30()!,
-                             color: .purpleColor)
+                                     font: .delaGothicOneRegular30(),
+                                     color: .purpleColor)
     private let backButton = BackButton()
     private let stopButton = StopButton()
     private let warningLabel = UILabel(text: "Проигравший выполняет задание",
-                             font: UIFont.delaGothicOneRegular24()!,
-                             color: .blackColor)
+                                       font: .delaGothicOneRegular24(),
+                                       color: .blackColor)
     private let questLabel = UILabel(text: "В следующем раунде после каждого ответа хлопать в ладоши",
-                             font: UIFont.delaGothicOneRegular20()!,
-                             color: .purpleColor)
+                                     font: .delaGothicOneRegular20(),
+                                     color: .purpleColor)
     
     private let explosionImageView: UIImageView = {
        let imageView = UIImageView()
@@ -50,6 +50,8 @@ class GameEndView: UIView {
         addSubview(stopButton)
         addSubview(warningLabel)
         addSubview(explosionImageView)
+        questLabel.shadowColor = .blackColor
+        questLabel.shadowOffset = CGSize(width: -0.5, height: -0.5)
         addSubview(questLabel)
         addSubview(nextQuestButton)
         addSubview(repeatButton)
@@ -94,10 +96,9 @@ extension GameEndView {
             nextQuestButton.topAnchor.constraint(equalTo: questLabel.bottomAnchor, constant: 30),
             
             repeatButton.heightAnchor.constraint(equalToConstant: 80),
-            repeatButton.widthAnchor.constraint(equalToConstant: 275),
+            repeatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70),
             repeatButton.topAnchor.constraint(equalTo: nextQuestButton.bottomAnchor, constant: 15),
             repeatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            repeatButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         ])
     }
 }
