@@ -64,6 +64,7 @@ class CategoryViewController: UIViewController, MyCollectionViewCellDelegate {
         categoreView.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
+        Quiestion.generateQuestions()
     }
     
     override func viewWillLayoutSubviews() {

@@ -29,6 +29,7 @@ class MyCollectionViewCell: UICollectionViewCell {
 
     lazy var selectButton: UIButton = {
         let button = UIButton(type: .system)
+        button.isEnabled = false
         button.setTitle("", for: .normal)
         let configuration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular)
         let image = UIImage(systemName: "circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)

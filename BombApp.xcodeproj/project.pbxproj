@@ -10,6 +10,13 @@
 		4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3EB2A815F01002B326C /* BackgroundColor.swift */; };
 		4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */; };
 		40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */; };
+		40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4D5902A82D5320035E86B /* QuestionBrain.swift */; };
+		40C4D5982A82E2300035E86B /* Miscellaneous.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5972A82E2300035E86B /* Miscellaneous.txt */; };
+		40C4D59A2A82E28A0035E86B /* Sport And Hobbies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */; };
+		40C4D59C2A82E2F40035E86B /* About Life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59B2A82E2F40035E86B /* About Life.txt */; };
+		40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59D2A82E3770035E86B /* Celebrities.txt */; };
+		40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */; };
+		40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5A12A82E40D0035E86B /* Nature.txt */; };
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -28,6 +35,13 @@
 		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		40C4D5902A82D5320035E86B /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
+		40C4D5972A82E2300035E86B /* Miscellaneous.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Miscellaneous.txt; sourceTree = "<group>"; };
+		40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sport And Hobbies.txt"; sourceTree = "<group>"; };
+		40C4D59B2A82E2F40035E86B /* About Life.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "About Life.txt"; sourceTree = "<group>"; };
+		40C4D59D2A82E3770035E86B /* Celebrities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Celebrities.txt; sourceTree = "<group>"; };
+		40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
+		40C4D5A12A82E40D0035E86B /* Nature.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +77,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		40C4D5942A82E1B60035E86B /* HelperQuestionBrain */ = {
+			isa = PBXGroup;
+			children = (
+				40C4D5972A82E2300035E86B /* Miscellaneous.txt */,
+				40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */,
+				40C4D59B2A82E2F40035E86B /* About Life.txt */,
+				40C4D59D2A82E3770035E86B /* Celebrities.txt */,
+				40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */,
+				40C4D5A12A82E40D0035E86B /* Nature.txt */,
+			);
+			path = HelperQuestionBrain;
+			sourceTree = "<group>";
+		};
 		40CA79692A81885200B392ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				40C4D5902A82D5320035E86B /* QuestionBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +151,7 @@
 		868D15E62A80D62600C6D712 /* CategoryModule */ = {
 			isa = PBXGroup;
 			children = (
+				40C4D5942A82E1B60035E86B /* HelperQuestionBrain */,
 				40CA79692A81885200B392ED /* Model */,
 				4087EC482A819CC70096A55C /* Views */,
 				868D15EE2A80DCCF00C6D712 /* Controllers */,
@@ -345,8 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */,
+				40C4D59A2A82E28A0035E86B /* Sport And Hobbies.txt in Resources */,
+				40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */,
+				40C4D5982A82E2300035E86B /* Miscellaneous.txt in Resources */,
+				40C4D59C2A82E2F40035E86B /* About Life.txt in Resources */,
 				868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */,
+				40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */,
 				868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */,
+				40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +403,7 @@
 				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
 				4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
+				40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
