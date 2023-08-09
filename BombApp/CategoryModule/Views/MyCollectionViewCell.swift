@@ -7,6 +7,7 @@ protocol MyCollectionViewCellDelegate: NSObject {
 class MyCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: MyCollectionViewCellDelegate?
+
     static let identifier = "MyCell"
     
     private lazy var myImageView: UIImageView = {
