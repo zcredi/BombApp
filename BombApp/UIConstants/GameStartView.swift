@@ -18,7 +18,7 @@ class GameStartView: UIView {
     
     private let backButton = BackButton()
     private let stopButton = StopButton()
-    private let startButton = PurpleButton(text: "Запустить")
+    let startButton = PurpleButton(text: "Запустить")
     
     private let bombImageView: UIImageView = {
        let imageView = UIImageView()
@@ -27,7 +27,8 @@ class GameStartView: UIView {
         return imageView
     }()
     
-    var closure: (() -> Void)?
+//    var closure: (() -> Void)?
+    private var questLogic = QuestLogic()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -49,14 +50,36 @@ class GameStartView: UIView {
         addSubview(gameLabel)
         addSubview(bombImageView)
         addSubview(startButton)
-        startButton.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
+        startButton.addTarget(nil, action: #selector(GameViewController.startButtonPressed), for: .touchUpInside)
     }
     
-    @objc private func startButtonPressed() {
-        closure?()
-        startButton.isHidden = true
-        gameLabel.text = "Назовите зимний вид спорта"
-    }
+//    @objc private func startButtonPressed() {
+//        closure?()
+//        startButton.isHidden = true
+//        gameLabel.text = "Назовите зимний вид спорта"
+//        if startButton.isHidden {
+//            bombImageView.isHidden = true
+//
+//            let bombView: UIView = {
+//                let view = UIView()
+//                view.translatesAutoresizingMaskIntoConstraints = false
+//                return view
+//            }()
+//            addSubview(bombView)
+//            questLogic.startAnimationView()
+//            bombView.addSubview(questLogic.animationView)
+//
+//            NSLayoutConstraint.activate([
+//                questLogic.animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+//                questLogic.animationView.centerYAnchor.constraint(equalTo: centerYAnchor),
+//                questLogic.animationView.heightAnchor.constraint(equalToConstant: 330),
+//                questLogic.animationView.widthAnchor.constraint(equalToConstant: 330)
+//            ])
+//            willRemoveSubview(questLogic.animationView)
+            //  let gameEndVC = GameEndViewController()
+            //  pushViewController(gameEndVC, animated: true)
+//        }
+//    }
 }
 
 extension GameStartView {
