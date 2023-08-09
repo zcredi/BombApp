@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
         
         updateUI()
         setConstraints()
+        setupNavigationBar()
     }
     
     private func updateUI() {
@@ -26,9 +27,22 @@ class GameViewController: UIViewController {
 //        }
     }
     
+    private func setupNavigationBar() {
+        createCustomNavigationBar()
+        
+        let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
+        let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
+        navigationItem.titleView = sceneTitleView
+        navigationItem.rightBarButtonItems = [gameStopButton]
+    }
+    
     @objc func startButtonPressed() {
         print("button is hidden and title changed")
         gameStartView.startButton.isHidden = true
+    }
+    
+    @objc func stopOrResumeGame() {
+        print("Game stop/resume")
     }
 }
 

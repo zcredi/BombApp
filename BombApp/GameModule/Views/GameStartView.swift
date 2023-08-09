@@ -9,15 +9,15 @@ import UIKit
 
 class GameStartView: UIView {
     
-    private let titleLabel = UILabel(text: "Игра",
-                                     font: .delaGothicOneRegular30(),
-                                     color: .purpleColor)
+//    private let titleLabel = UILabel(text: "Игра",
+//                                     font: .delaGothicOneRegular30(),
+//                                     color: .purpleColor)
     private let gameLabel = UILabel(text: "Нажмите “Запустить” чтобы начать игру",
                                     font: .delaGothicOneRegular32(),
                                     color: .purpleColor)
     
-    private let backButton = BackButton()
-    private let stopButton = StopButton()
+//    private let backButton = BackButton()
+//    private let stopButton = StopButton()
     let startButton = PurpleButton(text: "Запустить")
     
     private let bombImageView: UIImageView = {
@@ -44,9 +44,9 @@ class GameStartView: UIView {
     private func updateUI() {
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(backButton)
-        addSubview(titleLabel)
-        addSubview(stopButton)
+//        addSubview(backButton)
+//        addSubview(titleLabel)
+//        addSubview(stopButton)
         addSubview(gameLabel)
         addSubview(bombImageView)
         addSubview(startButton)
@@ -86,25 +86,26 @@ extension GameStartView {
     private func setConstraints() {
         NSLayoutConstraint.activate([
         
-            backButton.heightAnchor.constraint(equalToConstant: 19),
-            backButton.widthAnchor.constraint(equalToConstant: 11),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            backButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            
-            titleLabel.heightAnchor.constraint(equalToConstant: 40),
-            titleLabel.widthAnchor.constraint(equalToConstant: 92),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            
-            stopButton.heightAnchor.constraint(equalToConstant: 38),
-            stopButton.widthAnchor.constraint(equalToConstant: 37),
-            stopButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            stopButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+//            backButton.heightAnchor.constraint(equalToConstant: 19),
+//            backButton.widthAnchor.constraint(equalToConstant: 11),
+//            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            backButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+//            
+//            titleLabel.heightAnchor.constraint(equalToConstant: 40),
+//            titleLabel.widthAnchor.constraint(equalToConstant: 92),
+//            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+//            
+//            stopButton.heightAnchor.constraint(equalToConstant: 38),
+//            stopButton.widthAnchor.constraint(equalToConstant: 37),
+//            stopButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+//            stopButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             
             gameLabel.heightAnchor.constraint(equalToConstant: 115),
             gameLabel.widthAnchor.constraint(equalToConstant: 329),
             gameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
+//            gameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
+            gameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 40),
             
             bombImageView.heightAnchor.constraint(equalToConstant: 350),
             bombImageView.widthAnchor.constraint(equalToConstant: 310),

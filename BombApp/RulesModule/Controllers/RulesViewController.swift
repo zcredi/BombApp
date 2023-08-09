@@ -11,8 +11,15 @@ class RulesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        createCustomNavigationBar()
+        
+        let sceneTitleView = createCustomTitleView(sceneTitle: "Помощь")
+        navigationItem.titleView = sceneTitleView
     }
     
 
