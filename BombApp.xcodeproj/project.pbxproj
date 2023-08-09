@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3EB2A815F01002B326C /* BackgroundColor.swift */; };
+		4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */; };
+		40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */; };
+		40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4D5902A82D5320035E86B /* QuestionBrain.swift */; };
+		40C4D5982A82E2300035E86B /* Miscellaneous.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5972A82E2300035E86B /* Miscellaneous.txt */; };
+		40C4D59A2A82E28A0035E86B /* Sport And Hobbies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */; };
+		40C4D59C2A82E2F40035E86B /* About Life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59B2A82E2F40035E86B /* About Life.txt */; };
+		40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59D2A82E3770035E86B /* Celebrities.txt */; };
+		40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */; };
+		40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5A12A82E40D0035E86B /* Nature.txt */; };
 		529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7502A815ED40047DCC6 /* GameStartView.swift */; };
-		529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7522A81609F0047DCC6 /* BackgroundColor.swift */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
 		529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7572A81A7410047DCC6 /* BackButton.swift */; };
 		529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7592A81A8EB0047DCC6 /* StopButton.swift */; };
@@ -31,8 +40,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		40C4D5902A82D5320035E86B /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
+		40C4D5972A82E2300035E86B /* Miscellaneous.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Miscellaneous.txt; sourceTree = "<group>"; };
+		40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sport And Hobbies.txt"; sourceTree = "<group>"; };
+		40C4D59B2A82E2F40035E86B /* About Life.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "About Life.txt"; sourceTree = "<group>"; };
+		40C4D59D2A82E3770035E86B /* Celebrities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Celebrities.txt; sourceTree = "<group>"; };
+		40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
+		40C4D5A12A82E40D0035E86B /* Nature.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
+
 		529BD7502A815ED40047DCC6 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameStartView.swift; path = BombApp/UIConstants/GameStartView.swift; sourceTree = SOURCE_ROOT; };
-		529BD7522A81609F0047DCC6 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
 		529BD7572A81A7410047DCC6 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		529BD7592A81A8EB0047DCC6 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
@@ -67,6 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4087EC482A819CC70096A55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40C4D5942A82E1B60035E86B /* HelperQuestionBrain */ = {
+			isa = PBXGroup;
+			children = (
+				40C4D5972A82E2300035E86B /* Miscellaneous.txt */,
+				40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */,
+				40C4D59B2A82E2F40035E86B /* About Life.txt */,
+				40C4D59D2A82E3770035E86B /* Celebrities.txt */,
+				40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */,
+				40C4D5A12A82E40D0035E86B /* Nature.txt */,
+			);
+			path = HelperQuestionBrain;
+			sourceTree = "<group>";
+		};
+		40CA79692A81885200B392ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40C4D5902A82D5320035E86B /* QuestionBrain.swift */,
+			);
+			path = Model;
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +177,9 @@
 		868D15E62A80D62600C6D712 /* CategoryModule */ = {
 			isa = PBXGroup;
 			children = (
-				868D15F92A80DD1300C6D712 /* Models */,
-				868D15F32A80DCE900C6D712 /* Views */,
+				40C4D5942A82E1B60035E86B /* HelperQuestionBrain */,
+				40CA79692A81885200B392ED /* Model */,
+				4087EC482A819CC70096A55C /* Views */,
 				868D15EE2A80DCCF00C6D712 /* Controllers */,
 			);
 			path = CategoryModule;
@@ -175,6 +222,8 @@
 				529BD7542A81638A0047DCC6 /* UILabel+App.swift */,
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
+				4093C3EB2A815F01002B326C /* BackgroundColor.swift */,
+				40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */,
 				529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */,
 				529BD75F2A81AD910047DCC6 /* UIView+App.swift */,
 			);
@@ -247,13 +296,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		868D15F32A80DCE900C6D712 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		868D15F42A80DCED00C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,13 +320,6 @@
 			sourceTree = "<group>";
 		};
 		868D15F82A80DD1000C6D712 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		868D15F92A80DD1300C6D712 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -371,8 +406,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */,
+				40C4D59A2A82E28A0035E86B /* Sport And Hobbies.txt in Resources */,
+				40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */,
+				40C4D5982A82E2300035E86B /* Miscellaneous.txt in Resources */,
+				40C4D59C2A82E2F40035E86B /* About Life.txt in Resources */,
 				868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */,
+				40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */,
 				868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */,
+				40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */,
 				529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */,
 				868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */,
 				529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */,
@@ -398,7 +440,9 @@
 				529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */,
 				529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
+				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
+				40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 				529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */,
 			);
@@ -544,8 +588,8 @@
 				INFOPLIST_FILE = BombApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,8 +618,8 @@
 				INFOPLIST_FILE = BombApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
