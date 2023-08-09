@@ -1,20 +1,11 @@
 import UIKit
 
 class CategoryViewController: UIViewController, MyCollectionViewCellDelegate {
-    private var isSelected: Bool = false
-    
-    func didSelectItem(_ button: UIButton) {
-        let configuration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular)
-        let imageCircle = UIImage(systemName: "circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        let checkmark = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        isSelected ? button.setImage(imageCircle?.withConfiguration(configuration), for: .normal) : button.setImage(checkmark?.withConfiguration(configuration), for: .normal)
-        isSelected.toggle()
-        isSelected ? selectedItems.append(text[button.tag]) : selectedItems.removeAll { $0 == text[button.tag] }
-    }
     
     private let text: [String] = ["О Разном", "Спорт и Хобби", "Про Жизнь", "Знаменитости", "Исскуство и Кино", "Природа"]
     private let image: [UIImage] = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!, UIImage(named: "image6")!]
     private var selectedItems: [String] = []
+    private var isSelected: Bool = false
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -70,6 +61,15 @@ class CategoryViewController: UIViewController, MyCollectionViewCellDelegate {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         makeConstraints()
+    }
+    
+    func didSelectItem(_ button: UIButton) {
+        let configuration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular)
+        let imageCircle = UIImage(systemName: "circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let checkmark = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        isSelected ? button.setImage(imageCircle?.withConfiguration(configuration), for: .normal) : button.setImage(checkmark?.withConfiguration(configuration), for: .normal)
+        isSelected.toggle()
+        isSelected ? selectedItems.append(text[button.tag]) : selectedItems.removeAll { $0 == text[button.tag] }
     }
 
     @IBAction func touchDown(sender: UIButton) {
