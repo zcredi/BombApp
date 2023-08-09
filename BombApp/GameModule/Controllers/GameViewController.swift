@@ -9,29 +9,21 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    private let gameStartView = GameStartView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateUI()
-        setConstraints()
+
+        // Do any additional setup after loading the view.
     }
     
-    private func updateUI() {
-        addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
-        view.addSubview(gameStartView)
-    }
-}
 
-extension GameViewController {
-    private func setConstraints() {
-        NSLayoutConstraint.activate([
-        
-            gameStartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            gameStartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            gameStartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            gameStartView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-        ])
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }
