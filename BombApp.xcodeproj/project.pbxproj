@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7502A815ED40047DCC6 /* GameStartView.swift */; };
 		529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7522A81609F0047DCC6 /* BackgroundColor.swift */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
@@ -17,6 +20,7 @@
 		529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */; };
 		529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75F2A81AD910047DCC6 /* UIView+App.swift */; };
 		529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7662A81CBF20047DCC6 /* GameEndView.swift */; };
+<<<<<<< HEAD
 =======
 		4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3EB2A815F01002B326C /* BackgroundColor.swift */; };
 		4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */; };
@@ -29,6 +33,8 @@
 		40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */; };
 		40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5A12A82E40D0035E86B /* Nature.txt */; };
 >>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -45,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7502A815ED40047DCC6 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameStartView.swift; path = BombApp/UIConstants/GameStartView.swift; sourceTree = SOURCE_ROOT; };
 		529BD7522A81609F0047DCC6 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
@@ -54,6 +63,7 @@
 		529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
 		529BD75F2A81AD910047DCC6 /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		529BD7662A81CBF20047DCC6 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 =======
 		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -66,6 +76,8 @@
 		40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
 		40C4D5A12A82E40D0035E86B /* Nature.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
 >>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +106,9 @@
 
 /* Begin PBXGroup section */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +118,7 @@
 				529BD75B2A81AA880047DCC6 /* PurpleButton.swift */,
 			);
 			path = Unique;
+<<<<<<< HEAD
 =======
 		4087EC482A819CC70096A55C /* Views */ = {
 			isa = PBXGroup;
@@ -132,6 +148,8 @@
 			);
 			path = Model;
 >>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 			sourceTree = "<group>";
 		};
 		868D15A42A80CA9000C6D712 = {
@@ -230,6 +248,9 @@
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */,
 				529BD75F2A81AD910047DCC6 /* UIView+App.swift */,
 =======
@@ -441,6 +462,9 @@
 			buildActionMask = 2147483647;
 			files = (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */,
 =======
 				4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */,
@@ -453,10 +477,13 @@
 				868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
 				4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */,
 >>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 			);
