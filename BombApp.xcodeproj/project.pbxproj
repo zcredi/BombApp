@@ -7,15 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7502A815ED40047DCC6 /* GameStartView.swift */; };
-		529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7522A81609F0047DCC6 /* BackgroundColor.swift */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
-		529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7572A81A7410047DCC6 /* BackButton.swift */; };
-		529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7592A81A8EB0047DCC6 /* StopButton.swift */; };
-		529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75B2A81AA880047DCC6 /* PurpleButton.swift */; };
-		529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */; };
-		529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75F2A81AD910047DCC6 /* UIView+App.swift */; };
-		529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7662A81CBF20047DCC6 /* GameEndView.swift */; };
 		529BD76C2A82FF690047DCC6 /* QuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD76B2A82FF690047DCC6 /* QuestModel.swift */; };
 		529BD76F2A830DF30047DCC6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 529BD76E2A830DF30047DCC6 /* Lottie */; };
 		529BD7712A83B7DC0047DCC6 /* bombAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 529BD7702A83B7DC0047DCC6 /* bombAnimation.json */; };
@@ -24,6 +16,15 @@
 		867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */; };
 		867B18552A83D1AE00F7CAAA /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */; };
 		867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */; };
+		867B18592A83D76D00F7CAAA /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18582A83D76D00F7CAAA /* GameEndView.swift */; };
+		867B185B2A83D79200F7CAAA /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185A2A83D79200F7CAAA /* GameEndViewController.swift */; };
+		867B18602A83D7A600F7CAAA /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185C2A83D7A600F7CAAA /* BackButton.swift */; };
+		867B18612A83D7A600F7CAAA /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185D2A83D7A600F7CAAA /* PurpleButton.swift */; };
+		867B18622A83D7A600F7CAAA /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185E2A83D7A600F7CAAA /* BackgroundColor.swift */; };
+		867B18632A83D7A600F7CAAA /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185F2A83D7A600F7CAAA /* StopButton.swift */; };
+		867B186A2A83D7C600F7CAAA /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18682A83D7C600F7CAAA /* UIStackView+App.swift */; };
+		867B186B2A83D7C600F7CAAA /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18692A83D7C600F7CAAA /* UIView+App.swift */; };
+		867B18752A83D98500F7CAAA /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18742A83D98500F7CAAA /* GameStartView.swift */; };
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -31,7 +32,6 @@
 		868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15FD2A80DD4E00C6D712 /* MainViewController.swift */; };
 		868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15FF2A80DD6100C6D712 /* CategoryViewController.swift */; };
 		868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16012A80DD6F00C6D712 /* GameViewController.swift */; };
-		868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16032A80DD7E00C6D712 /* GameEndViewController.swift */; };
 		868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16052A80DD8E00C6D712 /* RulesViewController.swift */; };
 		868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16082A80DE7400C6D712 /* UIColor+App.swift */; };
 		868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868D160A2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf */; };
@@ -39,15 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		529BD7502A815ED40047DCC6 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameStartView.swift; path = BombApp/UIConstants/GameStartView.swift; sourceTree = SOURCE_ROOT; };
-		529BD7522A81609F0047DCC6 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
-		529BD7572A81A7410047DCC6 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		529BD7592A81A8EB0047DCC6 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
-		529BD75B2A81AA880047DCC6 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
-		529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
-		529BD75F2A81AD910047DCC6 /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
-		529BD7662A81CBF20047DCC6 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		529BD76B2A82FF690047DCC6 /* QuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestModel.swift; sourceTree = "<group>"; };
 		529BD7702A83B7DC0047DCC6 /* bombAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bombAnimation.json; sourceTree = "<group>"; };
 		529BD7722A83B81F0047DCC6 /* QuestLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestLogic.swift; sourceTree = "<group>"; };
@@ -55,6 +47,15 @@
 		867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperQuestionBrain.swift; sourceTree = "<group>"; };
 		867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		867B18582A83D76D00F7CAAA /* GameEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEndView.swift; path = ../../../../../../BombApp/BombApp/GameEndModule/Views/GameEndView.swift; sourceTree = "<group>"; };
+		867B185A2A83D79200F7CAAA /* GameEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
+		867B185C2A83D7A600F7CAAA /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		867B185D2A83D7A600F7CAAA /* PurpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		867B185E2A83D7A600F7CAAA /* BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		867B185F2A83D7A600F7CAAA /* StopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		867B18682A83D7C600F7CAAA /* UIStackView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
+		867B18692A83D7C600F7CAAA /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
+		867B18742A83D98500F7CAAA /* GameStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		868D15FD2A80DD4E00C6D712 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		868D15FF2A80DD6100C6D712 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		868D16012A80DD6F00C6D712 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		868D16032A80DD7E00C6D712 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		868D16052A80DD8E00C6D712 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		868D16082A80DE7400C6D712 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		868D160A2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -86,10 +86,10 @@
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7522A81609F0047DCC6 /* BackgroundColor.swift */,
-				529BD7572A81A7410047DCC6 /* BackButton.swift */,
-				529BD7592A81A8EB0047DCC6 /* StopButton.swift */,
-				529BD75B2A81AA880047DCC6 /* PurpleButton.swift */,
+				867B185C2A83D7A600F7CAAA /* BackButton.swift */,
+				867B185E2A83D7A600F7CAAA /* BackgroundColor.swift */,
+				867B185D2A83D7A600F7CAAA /* PurpleButton.swift */,
+				867B185F2A83D7A600F7CAAA /* StopButton.swift */,
 			);
 			path = Unique;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 				529BD7542A81638A0047DCC6 /* UILabel+App.swift */,
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
-				529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */,
-				529BD75F2A81AD910047DCC6 /* UIView+App.swift */,
+				867B18682A83D7C600F7CAAA /* UIStackView+App.swift */,
+				867B18692A83D7C600F7CAAA /* UIView+App.swift */,
 				867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */,
 			);
 			path = UIConstants;
@@ -263,7 +263,7 @@
 		868D15F02A80DCD500C6D712 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				868D16032A80DD7E00C6D712 /* GameEndViewController.swift */,
+				867B185A2A83D79200F7CAAA /* GameEndViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 		868D15F42A80DCED00C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7502A815ED40047DCC6 /* GameStartView.swift */,
+				867B18742A83D98500F7CAAA /* GameStartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 		868D15F52A80DCF100C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7662A81CBF20047DCC6 /* GameEndView.swift */,
+				867B18582A83D76D00F7CAAA /* GameEndView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,30 +413,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */,
+				867B18632A83D7A600F7CAAA /* StopButton.swift in Sources */,
 				868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */,
-				529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */,
 				529BD7732A83B81F0047DCC6 /* QuestLogic.swift in Sources */,
+				867B18602A83D7A600F7CAAA /* BackButton.swift in Sources */,
 				868D160D2A80F2AD00C6D712 /* UIFont+App.swift in Sources */,
 				868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */,
-				529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */,
-				529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */,
+				867B185B2A83D79200F7CAAA /* GameEndViewController.swift in Sources */,
 				868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */,
-				529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */,
+				867B18592A83D76D00F7CAAA /* GameEndView.swift in Sources */,
 				529BD76C2A82FF690047DCC6 /* QuestModel.swift in Sources */,
 				529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */,
 				868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */,
 				867B18552A83D1AE00F7CAAA /* MyCollectionViewCell.swift in Sources */,
-				868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */,
 				867B18522A83D18200F7CAAA /* QuestionBrain.swift in Sources */,
-				529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */,
-				529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
+				867B186B2A83D7C600F7CAAA /* UIView+App.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
+				867B18752A83D98500F7CAAA /* GameStartView.swift in Sources */,
 				867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 				867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */,
-				529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */,
+				867B186A2A83D7C600F7CAAA /* UIStackView+App.swift in Sources */,
+				867B18622A83D7A600F7CAAA /* BackgroundColor.swift in Sources */,
+				867B18612A83D7A600F7CAAA /* PurpleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
