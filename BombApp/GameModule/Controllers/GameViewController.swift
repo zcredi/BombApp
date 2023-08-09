@@ -21,6 +21,13 @@ class GameViewController: UIViewController {
     private func updateUI() {
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
         view.addSubview(gameStartView)
+        gameStartView.closure = { [weak self] in
+            self?.startButtonPressed()
+        }
+    }
+    
+    @objc private func startButtonPressed() {
+        print("button is hidden and title changed")
     }
 }
 

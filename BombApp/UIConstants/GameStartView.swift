@@ -11,10 +11,10 @@ class GameStartView: UIView {
     
     private let titleLabel = UILabel(text: "Игра",
                                      font: .delaGothicOneRegular30(),
-                             color: .purpleColor)
+                                     color: .purpleColor)
     private let gameLabel = UILabel(text: "Нажмите “Запустить” чтобы начать игру",
                                     font: .delaGothicOneRegular32(),
-                             color: .purpleColor)
+                                    color: .purpleColor)
     
     private let backButton = BackButton()
     private let stopButton = StopButton()
@@ -26,6 +26,8 @@ class GameStartView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    var closure: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -47,6 +49,13 @@ class GameStartView: UIView {
         addSubview(gameLabel)
         addSubview(bombImageView)
         addSubview(startButton)
+        startButton.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func startButtonPressed() {
+        closure?()
+        startButton.isHidden = true
+        gameLabel.text = "Назовите зимний вид спорта"
     }
 }
 
