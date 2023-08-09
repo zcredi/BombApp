@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7502A815ED40047DCC6 /* GameStartView.swift */; };
 		529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7522A81609F0047DCC6 /* BackgroundColor.swift */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
@@ -16,26 +20,27 @@
 		529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */; };
 		529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75F2A81AD910047DCC6 /* UIView+App.swift */; };
 		529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7662A81CBF20047DCC6 /* GameEndView.swift */; };
-		867B18362A83BA7400F7CAAA /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18352A83BA7400F7CAAA /* MyCollectionViewCell.swift */; };
-		867B183F2A83BA7F00F7CAAA /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B18382A83BA7F00F7CAAA /* Art and Cinema.txt */; };
-		867B18402A83BA7F00F7CAAA /* Sport And Hobbies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B18392A83BA7F00F7CAAA /* Sport And Hobbies.txt */; };
-		867B18412A83BA7F00F7CAAA /* Celebrities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B183A2A83BA7F00F7CAAA /* Celebrities.txt */; };
-		867B18422A83BA7F00F7CAAA /* About Life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B183B2A83BA7F00F7CAAA /* About Life.txt */; };
-		867B18432A83BA7F00F7CAAA /* Miscellaneous.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B183C2A83BA7F00F7CAAA /* Miscellaneous.txt */; };
-		867B18442A83BA7F00F7CAAA /* Miscellaneous.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867B183D2A83BA7F00F7CAAA /* Miscellaneous.xib */; };
-		867B18452A83BA7F00F7CAAA /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 867B183E2A83BA7F00F7CAAA /* Nature.txt */; };
-		867B18482A83BA8700F7CAAA /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18462A83BA8700F7CAAA /* QuestionBrain.swift */; };
-		867B18492A83BA8700F7CAAA /* HelperQuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18472A83BA8700F7CAAA /* HelperQuestionBrain.swift */; };
-		867B184B2A83BAB400F7CAAA /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B184A2A83BAB400F7CAAA /* CustomAlertController.swift */; };
-		867B184D2A83BCC000F7CAAA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B184C2A83BCC000F7CAAA /* CategoryViewController.swift */; };
-		8683F9F72A8277550025D164 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9F62A8277550025D164 /* SettingsViewController.swift */; };
-		8683F9F92A8280C90025D164 /* TimeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9F82A8280C90025D164 /* TimeGameView.swift */; };
-		8683F9FB2A8282B30025D164 /* AdditionalSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */; };
+<<<<<<< HEAD
+=======
+		4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3EB2A815F01002B326C /* BackgroundColor.swift */; };
+		4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */; };
+		40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */; };
+		40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4D5902A82D5320035E86B /* QuestionBrain.swift */; };
+		40C4D5982A82E2300035E86B /* Miscellaneous.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5972A82E2300035E86B /* Miscellaneous.txt */; };
+		40C4D59A2A82E28A0035E86B /* Sport And Hobbies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */; };
+		40C4D59C2A82E2F40035E86B /* About Life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59B2A82E2F40035E86B /* About Life.txt */; };
+		40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59D2A82E3770035E86B /* Celebrities.txt */; };
+		40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */; };
+		40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5A12A82E40D0035E86B /* Nature.txt */; };
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
 		868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868D15BB2A80CA9200C6D712 /* LaunchScreen.storyboard */; };
 		868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15FD2A80DD4E00C6D712 /* MainViewController.swift */; };
+		868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15FF2A80DD6100C6D712 /* CategoryViewController.swift */; };
 		868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16012A80DD6F00C6D712 /* GameViewController.swift */; };
 		868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16032A80DD7E00C6D712 /* GameEndViewController.swift */; };
 		868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D16052A80DD8E00C6D712 /* RulesViewController.swift */; };
@@ -45,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7502A815ED40047DCC6 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameStartView.swift; path = BombApp/UIConstants/GameStartView.swift; sourceTree = SOURCE_ROOT; };
 		529BD7522A81609F0047DCC6 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
@@ -54,21 +63,21 @@
 		529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
 		529BD75F2A81AD910047DCC6 /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		529BD7662A81CBF20047DCC6 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
-		867B18352A83BA7400F7CAAA /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
-		867B18382A83BA7F00F7CAAA /* Art and Cinema.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
-		867B18392A83BA7F00F7CAAA /* Sport And Hobbies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sport And Hobbies.txt"; sourceTree = "<group>"; };
-		867B183A2A83BA7F00F7CAAA /* Celebrities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Celebrities.txt; sourceTree = "<group>"; };
-		867B183B2A83BA7F00F7CAAA /* About Life.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "About Life.txt"; sourceTree = "<group>"; };
-		867B183C2A83BA7F00F7CAAA /* Miscellaneous.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Miscellaneous.txt; sourceTree = "<group>"; };
-		867B183D2A83BA7F00F7CAAA /* Miscellaneous.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Miscellaneous.xib; sourceTree = "<group>"; };
-		867B183E2A83BA7F00F7CAAA /* Nature.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
-		867B18462A83BA8700F7CAAA /* QuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
-		867B18472A83BA8700F7CAAA /* HelperQuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperQuestionBrain.swift; sourceTree = "<group>"; };
-		867B184A2A83BAB400F7CAAA /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
-		867B184C2A83BCC000F7CAAA /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		8683F9F62A8277550025D164 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		8683F9F82A8280C90025D164 /* TimeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGameView.swift; sourceTree = "<group>"; };
-		8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		4093C3EB2A815F01002B326C /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = BombApp/CategoryModule/Views/MyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		40C4D5902A82D5320035E86B /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
+		40C4D5972A82E2300035E86B /* Miscellaneous.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Miscellaneous.txt; sourceTree = "<group>"; };
+		40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sport And Hobbies.txt"; sourceTree = "<group>"; };
+		40C4D59B2A82E2F40035E86B /* About Life.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "About Life.txt"; sourceTree = "<group>"; };
+		40C4D59D2A82E3770035E86B /* Celebrities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Celebrities.txt; sourceTree = "<group>"; };
+		40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
+		40C4D5A12A82E40D0035E86B /* Nature.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +85,7 @@
 		868D15BC2A80CA9200C6D712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		868D15BE2A80CA9200C6D712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868D15FD2A80DD4E00C6D712 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		868D15FF2A80DD6100C6D712 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		868D16012A80DD6F00C6D712 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		868D16032A80DD7E00C6D712 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		868D16052A80DD8E00C6D712 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +105,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,54 +118,38 @@
 				529BD75B2A81AA880047DCC6 /* PurpleButton.swift */,
 			);
 			path = Unique;
-			sourceTree = "<group>";
-		};
-		867B18372A83BA7F00F7CAAA /* HelperQuestionBrain */ = {
+<<<<<<< HEAD
+=======
+		4087EC482A819CC70096A55C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				867B18382A83BA7F00F7CAAA /* Art and Cinema.txt */,
-				867B18392A83BA7F00F7CAAA /* Sport And Hobbies.txt */,
-				867B183A2A83BA7F00F7CAAA /* Celebrities.txt */,
-				867B183B2A83BA7F00F7CAAA /* About Life.txt */,
-				867B183C2A83BA7F00F7CAAA /* Miscellaneous.txt */,
-				867B183D2A83BA7F00F7CAAA /* Miscellaneous.xib */,
-				867B183E2A83BA7F00F7CAAA /* Nature.txt */,
-			);
-			path = HelperQuestionBrain;
-			sourceTree = "<group>";
-		};
-		8683F9F22A8277000025D164 /* SettingsModule */ = {
-			isa = PBXGroup;
-			children = (
-				8683F9F52A8277380025D164 /* Models */,
-				8683F9F42A82772F0025D164 /* Views */,
-				8683F9F32A8277280025D164 /* Controllers */,
-			);
-			path = SettingsModule;
-			sourceTree = "<group>";
-		};
-		8683F9F32A8277280025D164 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8683F9F62A8277550025D164 /* SettingsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		8683F9F42A82772F0025D164 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8683F9F82A8280C90025D164 /* TimeGameView.swift */,
-				8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */,
+				4093C3ED2A817928002B326C /* MyCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8683F9F52A8277380025D164 /* Models */ = {
+		40C4D5942A82E1B60035E86B /* HelperQuestionBrain */ = {
 			isa = PBXGroup;
 			children = (
+				40C4D5972A82E2300035E86B /* Miscellaneous.txt */,
+				40C4D5992A82E28A0035E86B /* Sport And Hobbies.txt */,
+				40C4D59B2A82E2F40035E86B /* About Life.txt */,
+				40C4D59D2A82E3770035E86B /* Celebrities.txt */,
+				40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */,
+				40C4D5A12A82E40D0035E86B /* Nature.txt */,
 			);
-			path = Models;
+			path = HelperQuestionBrain;
+			sourceTree = "<group>";
+		};
+		40CA79692A81885200B392ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40C4D5902A82D5320035E86B /* QuestionBrain.swift */,
+			);
+			path = Model;
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 			sourceTree = "<group>";
 		};
 		868D15A42A80CA9000C6D712 = {
@@ -180,7 +178,6 @@
 				868D15E72A80D63400C6D712 /* GameModule */,
 				868D15E82A80D64000C6D712 /* GameEndModule */,
 				868D15E92A80D64C00C6D712 /* RulesModule */,
-				8683F9F22A8277000025D164 /* SettingsModule */,
 				868D15EB2A80D6CF00C6D712 /* SupportingFiles */,
 			);
 			path = BombApp;
@@ -208,7 +205,6 @@
 		868D15E62A80D62600C6D712 /* CategoryModule */ = {
 			isa = PBXGroup;
 			children = (
-				867B18372A83BA7F00F7CAAA /* HelperQuestionBrain */,
 				868D15F92A80DD1300C6D712 /* Models */,
 				868D15F32A80DCE900C6D712 /* Views */,
 				868D15EE2A80DCCF00C6D712 /* Controllers */,
@@ -249,13 +245,18 @@
 		868D15EA2A80D68500C6D712 /* UIConstants */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7562A81A6FF0047DCC6 /* Unique */,
-				529BD7542A81638A0047DCC6 /* UILabel+App.swift */,
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */,
 				529BD75F2A81AD910047DCC6 /* UIView+App.swift */,
-				867B184A2A83BAB400F7CAAA /* CustomAlertController.swift */,
+=======
+				4093C3EB2A815F01002B326C /* BackgroundColor.swift */,
+				40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */,
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
 			);
 			path = UIConstants;
 			sourceTree = "<group>";
@@ -290,7 +291,7 @@
 		868D15EE2A80DCCF00C6D712 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				867B184C2A83BCC000F7CAAA /* CategoryViewController.swift */,
+				868D15FF2A80DD6100C6D712 /* CategoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,7 +330,6 @@
 		868D15F32A80DCE900C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				867B18352A83BA7400F7CAAA /* MyCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,7 +337,6 @@
 		868D15F42A80DCED00C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7502A815ED40047DCC6 /* GameStartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,7 +344,6 @@
 		868D15F52A80DCF100C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				529BD7662A81CBF20047DCC6 /* GameEndView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,8 +365,6 @@
 		868D15F92A80DD1300C6D712 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				867B18472A83BA8700F7CAAA /* HelperQuestionBrain.swift */,
-				867B18462A83BA8700F7CAAA /* QuestionBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -452,16 +448,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867B18412A83BA7F00F7CAAA /* Celebrities.txt in Resources */,
-				867B18402A83BA7F00F7CAAA /* Sport And Hobbies.txt in Resources */,
-				867B18442A83BA7F00F7CAAA /* Miscellaneous.xib in Resources */,
 				868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */,
-				867B18432A83BA7F00F7CAAA /* Miscellaneous.txt in Resources */,
 				868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */,
 				868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */,
-				867B18422A83BA7F00F7CAAA /* About Life.txt in Resources */,
-				867B183F2A83BA7F00F7CAAA /* Art and Cinema.txt in Resources */,
-				867B18452A83BA7F00F7CAAA /* Nature.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,31 +461,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867B18362A83BA7400F7CAAA /* MyCollectionViewCell.swift in Sources */,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */,
-				529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */,
+=======
+				4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */,
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+				868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */,
 				868D160D2A80F2AD00C6D712 /* UIFont+App.swift in Sources */,
 				868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */,
-				867B18482A83BA8700F7CAAA /* QuestionBrain.swift in Sources */,
-				8683F9FB2A8282B30025D164 /* AdditionalSettingsView.swift in Sources */,
-				8683F9F72A8277550025D164 /* SettingsViewController.swift in Sources */,
-				529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */,
-				529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */,
 				868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */,
-				529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */,
-				529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */,
 				868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */,
 				868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */,
-				867B18492A83BA8700F7CAAA /* HelperQuestionBrain.swift in Sources */,
-				529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */,
-				529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
-				867B184B2A83BAB400F7CAAA /* CustomAlertController.swift in Sources */,
-				867B184D2A83BCC000F7CAAA /* CategoryViewController.swift in Sources */,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
+				4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */,
+>>>>>>> parent of 3e9fb9d (Merge branch 'develop' into feature/CategoryViewController)
+=======
+>>>>>>> parent of adee04c (Merge pull request #5 from zcredi/feature/CategoryViewController)
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
-				8683F9F92A8280C90025D164 /* TimeGameView.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
-				529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
