@@ -16,6 +16,9 @@
 		529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */; };
 		529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75F2A81AD910047DCC6 /* UIView+App.swift */; };
 		529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7662A81CBF20047DCC6 /* GameEndView.swift */; };
+		8683F9F72A8277550025D164 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9F62A8277550025D164 /* SettingsViewController.swift */; };
+		8683F9F92A8280C90025D164 /* TimeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9F82A8280C90025D164 /* TimeGameView.swift */; };
+		8683F9FB2A8282B30025D164 /* AdditionalSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */; };
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
 		529BD75F2A81AD910047DCC6 /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		529BD7662A81CBF20047DCC6 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
+		8683F9F62A8277550025D164 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8683F9F82A8280C90025D164 /* TimeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGameView.swift; sourceTree = "<group>"; };
+		8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsView.swift; sourceTree = "<group>"; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,40 @@
 			path = Unique;
 			sourceTree = "<group>";
 		};
+		8683F9F22A8277000025D164 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				8683F9F52A8277380025D164 /* Models */,
+				8683F9F42A82772F0025D164 /* Views */,
+				8683F9F32A8277280025D164 /* Controllers */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		8683F9F32A8277280025D164 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8683F9F62A8277550025D164 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8683F9F42A82772F0025D164 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8683F9F82A8280C90025D164 /* TimeGameView.swift */,
+				8683F9FA2A8282B30025D164 /* AdditionalSettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8683F9F52A8277380025D164 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		868D15A42A80CA9000C6D712 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +144,7 @@
 				868D15E72A80D63400C6D712 /* GameModule */,
 				868D15E82A80D64000C6D712 /* GameEndModule */,
 				868D15E92A80D64C00C6D712 /* RulesModule */,
+				8683F9F22A8277000025D164 /* SettingsModule */,
 				868D15EB2A80D6CF00C6D712 /* SupportingFiles */,
 			);
 			path = BombApp;
@@ -388,6 +429,8 @@
 				529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */,
 				868D160D2A80F2AD00C6D712 /* UIFont+App.swift in Sources */,
 				868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */,
+				8683F9FB2A8282B30025D164 /* AdditionalSettingsView.swift in Sources */,
+				8683F9F72A8277550025D164 /* SettingsViewController.swift in Sources */,
 				529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */,
 				529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */,
 				868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */,
@@ -399,6 +442,7 @@
 				529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
+				8683F9F92A8280C90025D164 /* TimeGameView.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 				529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */,
 			);
