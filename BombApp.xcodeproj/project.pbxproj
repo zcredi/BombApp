@@ -17,6 +17,14 @@
 		40C4D59E2A82E3770035E86B /* Celebrities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59D2A82E3770035E86B /* Celebrities.txt */; };
 		40C4D5A02A82E3D60035E86B /* Art and Cinema.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */; };
 		40C4D5A22A82E40D0035E86B /* Nature.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40C4D5A12A82E40D0035E86B /* Nature.txt */; };
+		529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7502A815ED40047DCC6 /* GameStartView.swift */; };
+		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
+		529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7572A81A7410047DCC6 /* BackButton.swift */; };
+		529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7592A81A8EB0047DCC6 /* StopButton.swift */; };
+		529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75B2A81AA880047DCC6 /* PurpleButton.swift */; };
+		529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */; };
+		529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD75F2A81AD910047DCC6 /* UIView+App.swift */; };
+		529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7662A81CBF20047DCC6 /* GameEndView.swift */; };
 		868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B02A80CA9000C6D712 /* AppDelegate.swift */; };
 		868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D15B22A80CA9000C6D712 /* SceneDelegate.swift */; };
 		868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868D15B92A80CA9200C6D712 /* Assets.xcassets */; };
@@ -42,6 +50,15 @@
 		40C4D59D2A82E3770035E86B /* Celebrities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Celebrities.txt; sourceTree = "<group>"; };
 		40C4D59F2A82E3D60035E86B /* Art and Cinema.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art and Cinema.txt"; sourceTree = "<group>"; };
 		40C4D5A12A82E40D0035E86B /* Nature.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nature.txt; sourceTree = "<group>"; };
+
+		529BD7502A815ED40047DCC6 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameStartView.swift; path = BombApp/UIConstants/GameStartView.swift; sourceTree = SOURCE_ROOT; };
+		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
+		529BD7572A81A7410047DCC6 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		529BD7592A81A8EB0047DCC6 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		529BD75B2A81AA880047DCC6 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+App.swift"; sourceTree = "<group>"; };
+		529BD75F2A81AD910047DCC6 /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
+		529BD7662A81CBF20047DCC6 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		868D15AD2A80CA9000C6D712 /* BombApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D15B02A80CA9000C6D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868D15B22A80CA9000C6D712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +113,15 @@
 				40C4D5902A82D5320035E86B /* QuestionBrain.swift */,
 			);
 			path = Model;
+		529BD7562A81A6FF0047DCC6 /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				529BD7522A81609F0047DCC6 /* BackgroundColor.swift */,
+				529BD7572A81A7410047DCC6 /* BackButton.swift */,
+				529BD7592A81A8EB0047DCC6 /* StopButton.swift */,
+				529BD75B2A81AA880047DCC6 /* PurpleButton.swift */,
+			);
+			path = Unique;
 			sourceTree = "<group>";
 		};
 		868D15A42A80CA9000C6D712 = {
@@ -192,10 +218,14 @@
 		868D15EA2A80D68500C6D712 /* UIConstants */ = {
 			isa = PBXGroup;
 			children = (
+				529BD7562A81A6FF0047DCC6 /* Unique */,
+				529BD7542A81638A0047DCC6 /* UILabel+App.swift */,
 				868D16082A80DE7400C6D712 /* UIColor+App.swift */,
 				868D160C2A80F2AD00C6D712 /* UIFont+App.swift */,
 				4093C3EB2A815F01002B326C /* BackgroundColor.swift */,
 				40B315D22A8295F400CCC08B /* CustomAlertViewController.swift */,
+				529BD75D2A81ABAC0047DCC6 /* UIStackView+App.swift */,
+				529BD75F2A81AD910047DCC6 /* UIView+App.swift */,
 			);
 			path = UIConstants;
 			sourceTree = "<group>";
@@ -269,6 +299,7 @@
 		868D15F42A80DCED00C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				529BD7502A815ED40047DCC6 /* GameStartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +307,7 @@
 		868D15F52A80DCF100C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				529BD7662A81CBF20047DCC6 /* GameEndView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,18 +425,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4093C3EE2A817928002B326C /* MyCollectionViewCell.swift in Sources */,
+				529BD7532A81609F0047DCC6 /* BackgroundColor.swift in Sources */,
 				868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */,
+				529BD7512A815ED40047DCC6 /* GameStartView.swift in Sources */,
 				868D160D2A80F2AD00C6D712 /* UIFont+App.swift in Sources */,
 				868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */,
+				529BD75A2A81A8EB0047DCC6 /* StopButton.swift in Sources */,
+				529BD75C2A81AA880047DCC6 /* PurpleButton.swift in Sources */,
 				868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */,
+				529BD7672A81CBF20047DCC6 /* GameEndView.swift in Sources */,
+				529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */,
 				868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */,
 				868D16042A80DD7E00C6D712 /* GameEndViewController.swift in Sources */,
+				529BD75E2A81ABAC0047DCC6 /* UIStackView+App.swift in Sources */,
+				529BD7602A81AD910047DCC6 /* UIView+App.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
 				40B315D32A8295F400CCC08B /* CustomAlertViewController.swift in Sources */,
-				4093C3EC2A815F01002B326C /* BackgroundColor.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
 				40C4D5912A82D5320035E86B /* QuestionBrain.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
+				529BD7582A81A7410047DCC6 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
