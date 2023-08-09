@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB97042A83F90C008EE64F /* GaneEndView.swift */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
 		529BD76C2A82FF690047DCC6 /* QuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD76B2A82FF690047DCC6 /* QuestModel.swift */; };
 		529BD76F2A830DF30047DCC6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 529BD76E2A830DF30047DCC6 /* Lottie */; };
@@ -16,7 +17,6 @@
 		867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */; };
 		867B18552A83D1AE00F7CAAA /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */; };
 		867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */; };
-		867B18592A83D76D00F7CAAA /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18582A83D76D00F7CAAA /* GameEndView.swift */; };
 		867B185B2A83D79200F7CAAA /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185A2A83D79200F7CAAA /* GameEndViewController.swift */; };
 		867B18602A83D7A600F7CAAA /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185C2A83D7A600F7CAAA /* BackButton.swift */; };
 		867B18612A83D7A600F7CAAA /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185D2A83D7A600F7CAAA /* PurpleButton.swift */; };
@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40DB97042A83F90C008EE64F /* GaneEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaneEndView.swift; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
 		529BD76B2A82FF690047DCC6 /* QuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestModel.swift; sourceTree = "<group>"; };
 		529BD7702A83B7DC0047DCC6 /* bombAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bombAnimation.json; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperQuestionBrain.swift; sourceTree = "<group>"; };
 		867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
-		867B18582A83D76D00F7CAAA /* GameEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEndView.swift; path = ../../../../../../BombApp/BombApp/GameEndModule/Views/GameEndView.swift; sourceTree = "<group>"; };
 		867B185A2A83D79200F7CAAA /* GameEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		867B185C2A83D7A600F7CAAA /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		867B185D2A83D7A600F7CAAA /* PurpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
@@ -83,6 +83,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40DB97062A83F9BD008EE64F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40DB97072A83F9C9008EE64F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40DB97082A83F9D9008EE64F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40DB97092A83F9E2008EE64F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40DB970A2A83F9E7008EE64F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +191,8 @@
 		868D15E52A80D61B00C6D712 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				868D15F82A80DD1000C6D712 /* Models */,
-				868D15F22A80DCE300C6D712 /* Views */,
+				40DB97072A83F9C9008EE64F /* Views */,
+				40DB97062A83F9BD008EE64F /* Models */,
 				868D15ED2A80DCC600C6D712 /* Controllers */,
 			);
 			path = MainModule;
@@ -186,7 +221,7 @@
 		868D15E82A80D64000C6D712 /* GameEndModule */ = {
 			isa = PBXGroup;
 			children = (
-				868D15FB2A80DD1800C6D712 /* Models */,
+				40DB97082A83F9D9008EE64F /* Models */,
 				868D15F52A80DCF100C6D712 /* Views */,
 				868D15F02A80DCD500C6D712 /* Controllers */,
 			);
@@ -196,8 +231,8 @@
 		868D15E92A80D64C00C6D712 /* RulesModule */ = {
 			isa = PBXGroup;
 			children = (
-				868D15FC2A80DD1B00C6D712 /* Models */,
-				868D15F72A80DD0200C6D712 /* Views */,
+				40DB970A2A83F9E7008EE64F /* Views */,
+				40DB97092A83F9E2008EE64F /* Models */,
 				868D15F12A80DCD700C6D712 /* Controllers */,
 			);
 			path = RulesModule;
@@ -276,13 +311,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		868D15F22A80DCE300C6D712 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		868D15F32A80DCE900C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,37 +330,9 @@
 		868D15F52A80DCF100C6D712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				867B18582A83D76D00F7CAAA /* GameEndView.swift */,
+				40DB97042A83F90C008EE64F /* GaneEndView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		868D15F72A80DD0200C6D712 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		868D15F82A80DD1000C6D712 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		868D15FB2A80DD1800C6D712 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		868D15FC2A80DD1B00C6D712 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				867B18632A83D7A600F7CAAA /* StopButton.swift in Sources */,
+				40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */,
 				868D16002A80DD6100C6D712 /* CategoryViewController.swift in Sources */,
 				529BD7732A83B81F0047DCC6 /* QuestLogic.swift in Sources */,
 				867B18602A83D7A600F7CAAA /* BackButton.swift in Sources */,
@@ -421,7 +422,6 @@
 				868D15B12A80CA9000C6D712 /* AppDelegate.swift in Sources */,
 				867B185B2A83D79200F7CAAA /* GameEndViewController.swift in Sources */,
 				868D15B32A80CA9000C6D712 /* SceneDelegate.swift in Sources */,
-				867B18592A83D76D00F7CAAA /* GameEndView.swift in Sources */,
 				529BD76C2A82FF690047DCC6 /* QuestModel.swift in Sources */,
 				529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */,
 				868D16022A80DD6F00C6D712 /* GameViewController.swift in Sources */,
