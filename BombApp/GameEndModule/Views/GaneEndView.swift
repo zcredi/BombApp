@@ -1,5 +1,5 @@
 //
-//  GameEndView.swift
+//  GaneEndView.swift
 //  BombApp
 //
 //  Created by fullzoom on 09.08.2023.
