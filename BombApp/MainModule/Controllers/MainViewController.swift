@@ -97,15 +97,18 @@ class MainViewController: UIViewController {
     }
     
     @objc func startGameButtonTapped() {
-        
+        let gameViewController = GameViewController()
+        navigationController?.pushViewController(gameViewController, animated: true)
     }
     
     @objc func categoryButtonTapped() {
-        
+        let categoryViewController = CategoryViewController()
+        navigationController?.pushViewController(categoryViewController, animated: true)
     }
     
     @objc func rulesButtonTapped() {
-        
+        let rulesViewController = RulesViewController()
+        navigationController?.pushViewController(rulesViewController, animated: true)
     }
     
     

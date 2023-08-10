@@ -42,20 +42,22 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backChevron = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: nil)
-        backChevron.tintColor = .blackColor
-        let categoreView = UILabel()
-        categoreView.text = "Категории"
-        categoreView.textColor = .purpleColor
-        categoreView.font = UIFont(name: "DelaGothicOne-Regular", size: 30)
+//        let backChevron = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: nil)
+//        backChevron.tintColor = .blackColor
+//        let categoreView = UILabel()
+//        categoreView.text = "Категории"
+//        categoreView.textColor = .purpleColor
+//        categoreView.font = UIFont(name: "DelaGothicOne-Regular", size: 30)
         
-        self.navigationItem.titleView = categoreView
-        navigationItem.leftBarButtonItem = backChevron
+//        self.navigationItem.titleView = categoreView
+//        navigationItem.leftBarButtonItem = backChevron
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
-        categoreView.addSubview(collectionView)
+//        categoreView.addSubview(collectionView)
+        view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
         Quiestion.generateQuestions()
+        setupNavigationBar()
     }
     
     override func viewWillLayoutSubviews() {
@@ -79,6 +81,13 @@ class CategoryViewController: UIViewController {
             alertController.modalTransitionStyle = .crossDissolve
             self.present(alertController, animated: true)
         }
+    }
+    
+    private func setupNavigationBar() {
+        createCustomNavigationBar()
+        
+        let sceneTitleView = createCustomTitleView(sceneTitle: "Категории")
+        navigationItem.titleView = sceneTitleView
     }
     
     private func makeConstraints() {
