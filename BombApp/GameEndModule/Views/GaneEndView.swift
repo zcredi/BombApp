@@ -9,15 +9,10 @@ import UIKit
 
 class GameEndView: UIView {
     
-    private let titleLabel = UILabel(text: "Игра",
-                                     font: .delaGothicOneRegular30(),
-                                     color: .purpleColor)
-    private let backButton = BackButton()
-    private let stopButton = StopButton()
     private let warningLabel = UILabel(text: "Проигравший выполняет задание",
                                        font: .delaGothicOneRegular24(),
                                        color: .blackColor)
-    private let questLabel = UILabel(text: "В следующем раунде после каждого ответа хлопать в ладоши",
+    let questLabel = UILabel(text: "В следующем раунде после каждого ответа хлопать в ладоши",
                                      font: .delaGothicOneRegular20(),
                                      color: .purpleColor)
     
@@ -28,8 +23,8 @@ class GameEndView: UIView {
         return imageView
     }()
     
-    private let nextQuestButton = PurpleButton(text: "Другое задание")
-    private let repeatButton = PurpleButton(text: "Начать заного")
+    lazy var nextQuestButton = PurpleButton(text: "Другое задание")
+    lazy var repeatButton = PurpleButton(text: "Начать заного")
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -45,16 +40,15 @@ class GameEndView: UIView {
     private func updateUI() {
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(backButton)
-        addSubview(titleLabel)
-        addSubview(stopButton)
         addSubview(warningLabel)
         addSubview(explosionImageView)
         questLabel.shadowColor = .blackColor
         questLabel.shadowOffset = CGSize(width: -0.5, height: -0.5)
         addSubview(questLabel)
         addSubview(nextQuestButton)
+        nextQuestButton.addTarget(nil, action: #selector(GameEndViewController.nextQuestButtonPressed), for: .touchUpInside)
         addSubview(repeatButton)
+        repeatButton.addTarget(nil, action: #selector(GameEndViewController.repeatButtonPressed), for: .touchUpInside)
     }
 }
 
@@ -62,24 +56,9 @@ extension GameEndView {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
-            backButton.heightAnchor.constraint(equalToConstant: 19),
-            backButton.widthAnchor.constraint(equalToConstant: 11),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            backButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            
-            titleLabel.heightAnchor.constraint(equalToConstant: 40),
-            titleLabel.widthAnchor.constraint(equalToConstant: 92),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            
-            stopButton.heightAnchor.constraint(equalToConstant: 38),
-            stopButton.widthAnchor.constraint(equalToConstant: 37),
-            stopButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            stopButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            
             warningLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             warningLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            warningLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            warningLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             
             explosionImageView.heightAnchor.constraint(equalToConstant: 300),
             explosionImageView.widthAnchor.constraint(equalToConstant: 250),

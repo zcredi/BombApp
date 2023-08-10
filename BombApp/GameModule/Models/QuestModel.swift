@@ -6,17 +6,25 @@
 //
 
 import Foundation
+import Lottie
 
 struct QuestModel {
     
-    var timer = Timer()
+    var animationView: LottieAnimationView = .init()
     
+    mutating func createAnimationView() {
+        animationView = .init(name: "bombAnimation")
+        animationView.contentMode = .scaleToFill
+        animationView.animationSpeed = 0.7
+        animationView.loopMode = .loop
+        animationView.play()
+    }
     
+    func stopAnimationView() {
+        animationView.stop()
+    }
     
-    
-//
-//    mutating func setTimer() {
-//        timer.invalidate()
-//        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(qq), userInfo: nil, repeats: false)
-//    }
+    func playAnimationView() {
+        animationView.play()
+    }
 }

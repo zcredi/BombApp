@@ -16,12 +16,35 @@ class GameEndViewController: UIViewController {
         
         updateUI()
         setConstraints()
+        setupNavigationBar()
     }
     
     private func updateUI() {
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
         view.addSubview(gameEndView)
     }
+    
+    private func setupNavigationBar() {
+        createCustomNavigationBar()
+        
+        let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
+        let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
+        navigationItem.titleView = sceneTitleView
+        navigationItem.rightBarButtonItems = [gameStopButton]
+    }
+    
+    @objc func stopOrResumeGame() {
+        print("Game stop/resume")
+    }
+    
+    @objc func nextQuestButtonPressed() {
+        print("nextQuestButtonPressed")
+    }
+    
+    @objc func repeatButtonPressed() {
+        print("repeatButtonPressed")
+    }
+    
 }
 
 extension GameEndViewController {

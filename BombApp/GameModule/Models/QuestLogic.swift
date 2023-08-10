@@ -6,26 +6,41 @@
 //
 
 import UIKit
-import Lottie
+import AVFoundation
 
-struct QuestLogic {
+final class QuestLogic {
     
-    var animationView: LottieAnimationView = .init()
+    var wickPlayer: AVAudioPlayer!
+    var beatPlayer: AVAudioPlayer!
+    var blastPlayer: AVAudioPlayer!
     
-    mutating func startAnimationView() {
-        animationView = .init(name: "bombAnimation")
-        animationView.contentMode = .scaleToFill
-        
-        //add dependence on timer settings
-        animationView.animationSpeed = 0.5
-        animationView.loopMode = .playOnce
-        animationView.play()
+    func playBlastSound() {
+        let url = Bundle.main.url(forResource: "blast", withExtension: "wav")
+        blastPlayer = try! AVAudioPlayer(contentsOf: url!)
+        blastPlayer.volume = 1
+        blastPlayer.play()
     }
     
-//    mutating func closeAnimationView() {
-//        
-//        let markerName = animationView.animation?.markerNames
-//        animationView.play(fromMarker: "Start", toMarker: "End"
-//        
-//    }
+    func playBackgroundSound() {
+        let wickUrl = Bundle.main.url(forResource: "wick", withExtension: "wav")
+        wickPlayer = try! AVAudioPlayer(contentsOf: wickUrl!)
+        wickPlayer.volume = 0.5
+        wickPlayer.play()
+        
+        let beatUrl = Bundle.main.url(forResource: "heartBeat", withExtension: "wav")
+        beatPlayer = try! AVAudioPlayer(contentsOf: beatUrl!)
+        beatPlayer.volume = 2
+        beatPlayer.play()
+    }
+    
+    func stopSounds() {
+        wickPlayer.stop()
+        beatPlayer.stop()
+        
+    }
+    
+    func pauseSounds() {
+        wickPlayer.pause()
+        beatPlayer.pause()
+    }
 }
