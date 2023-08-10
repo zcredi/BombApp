@@ -10,6 +10,12 @@ import UIKit
 class GameViewController: UIViewController {
 
     private let gameStartView = GameStartView()
+    private let questLogic = QuestLogic()
+    private var questModel = QuestModel()
+    
+    var timer: Timer?
+    private var count = 5
+    private var isPaused = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +28,6 @@ class GameViewController: UIViewController {
     private func updateUI() {
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
         view.addSubview(gameStartView)
-//        gameStartView.closure = { [weak self] in
-//            self?.startButtonPressed()
-//        }
     }
     
     private func setupNavigationBar() {
@@ -36,13 +39,82 @@ class GameViewController: UIViewController {
         navigationItem.rightBarButtonItems = [gameStopButton]
     }
     
+    @objc func stopOrResumeGame() {
+        print("Game stop/resume")
+        if isPaused {
+            timer?.invalidate()
+            questLogic.pauseSounds()
+            questModel.stopAnimationView()
+            isPaused = false
+        } else {
+            createTimer()
+            isPaused = true
+            questLogic.playBackgroundSound()
+            questModel.playAnimationView()
+            addAnimationViewOnScreen()
+        }
+    }
+    
     @objc func startButtonPressed() {
         print("button is hidden and title changed")
         gameStartView.startButton.isHidden = true
+        gameStartView.gameLabel.text = "Назовите зимний вид спорта"
+        if gameStartView.startButton.isHidden {
+            gameStartView.bombImageView.isHidden = true
+            
+            questModel.createAnimationView()
+            addAnimationViewOnScreen()
+            
+            createTimer()
+            questLogic.playBackgroundSound()
+        }
     }
     
-    @objc func stopOrResumeGame() {
-        print("Game stop/resume")
+    func createTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        print(count)
+        if count != 0 {
+            count -= 1
+        } else {
+            timer?.invalidate()
+            questLogic.stopSounds()
+            navigationController?.pushViewController(GameEndViewController(), animated: true)
+            questModel.stopAnimationView()
+            deleteAnimationView()
+            questLogic.playBlastSound()
+        }
+    }
+    
+    private func deleteAnimationView() {
+        let bombAnimationView = questModel.animationView
+        bombAnimationView.removeFromSuperview()
+        bombAnimationView.removeConstraints([
+            bombAnimationView.trailingAnchor.constraint(equalTo: gameStartView.trailingAnchor, constant: -10),
+            bombAnimationView.leadingAnchor.constraint(equalTo: gameStartView.leadingAnchor, constant: 10),
+            bombAnimationView.centerXAnchor.constraint(equalTo: gameStartView.centerXAnchor),
+            bombAnimationView.bottomAnchor.constraint(equalTo: gameStartView.startButton.topAnchor, constant: 60)
+        ])
+    }
+    
+    private func addAnimationViewOnScreen() {
+        let bombView: UIView = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            return view
+        }()
+        gameStartView.addSubview(bombView)
+        let bombAnimationView = questModel.animationView
+        bombView.addSubview(bombAnimationView)
+        
+        NSLayoutConstraint.activate([
+            bombAnimationView.trailingAnchor.constraint(equalTo: gameStartView.trailingAnchor, constant: -10),
+            bombAnimationView.leadingAnchor.constraint(equalTo: gameStartView.leadingAnchor, constant: 10),
+            bombAnimationView.centerXAnchor.constraint(equalTo: gameStartView.centerXAnchor),
+            bombAnimationView.bottomAnchor.constraint(equalTo: gameStartView.startButton.topAnchor, constant: 60)
+        ])
     }
 }
 

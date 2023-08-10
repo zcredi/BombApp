@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB97042A83F90C008EE64F /* GaneEndView.swift */; };
+		5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC592A84CD4600075360 /* heartBeat.wav */; };
+		5272EC5D2A84CD4600075360 /* wick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5A2A84CD4600075360 /* wick.wav */; };
+		5272EC5E2A84CD4600075360 /* blast.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5B2A84CD4600075360 /* blast.wav */; };
+		5272EC612A84D01400075360 /* bombAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC602A84D01400075360 /* bombAnimation.json */; };
 		529BD7552A81638A0047DCC6 /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7542A81638A0047DCC6 /* UILabel+App.swift */; };
 		529BD76C2A82FF690047DCC6 /* QuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD76B2A82FF690047DCC6 /* QuestModel.swift */; };
 		529BD76F2A830DF30047DCC6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 529BD76E2A830DF30047DCC6 /* Lottie */; };
-		529BD7712A83B7DC0047DCC6 /* bombAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 529BD7702A83B7DC0047DCC6 /* bombAnimation.json */; };
 		529BD7732A83B81F0047DCC6 /* QuestLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7722A83B81F0047DCC6 /* QuestLogic.swift */; };
 		867B18522A83D18200F7CAAA /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18502A83D18200F7CAAA /* QuestionBrain.swift */; };
 		867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */; };
@@ -41,9 +44,12 @@
 
 /* Begin PBXFileReference section */
 		40DB97042A83F90C008EE64F /* GaneEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaneEndView.swift; sourceTree = "<group>"; };
+		5272EC592A84CD4600075360 /* heartBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heartBeat.wav; sourceTree = "<group>"; };
+		5272EC5A2A84CD4600075360 /* wick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wick.wav; sourceTree = "<group>"; };
+		5272EC5B2A84CD4600075360 /* blast.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blast.wav; sourceTree = "<group>"; };
+		5272EC602A84D01400075360 /* bombAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bombAnimation.json; sourceTree = "<group>"; };
 		529BD7542A81638A0047DCC6 /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
 		529BD76B2A82FF690047DCC6 /* QuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestModel.swift; sourceTree = "<group>"; };
-		529BD7702A83B7DC0047DCC6 /* bombAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bombAnimation.json; sourceTree = "<group>"; };
 		529BD7722A83B81F0047DCC6 /* QuestLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestLogic.swift; sourceTree = "<group>"; };
 		867B18502A83D18200F7CAAA /* QuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
 		867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperQuestionBrain.swift; sourceTree = "<group>"; };
@@ -120,6 +126,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5272EC572A84CD1700075360 /* Gif JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5272EC602A84D01400075360 /* bombAnimation.json */,
+			);
+			path = "Gif JSON";
+			sourceTree = "<group>";
+		};
+		5272EC582A84CD2000075360 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5272EC5B2A84CD4600075360 /* blast.wav */,
+				5272EC592A84CD4600075360 /* heartBeat.wav */,
+				5272EC5A2A84CD4600075360 /* wick.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		529BD7562A81A6FF0047DCC6 /* Unique */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				868D15AF2A80CA9000C6D712 /* BombApp */,
-				529BD7702A83B7DC0047DCC6 /* bombAnimation.json */,
 				868D15AE2A80CA9000C6D712 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -258,6 +281,8 @@
 		868D15EB2A80D6CF00C6D712 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5272EC572A84CD1700075360 /* Gif JSON */,
+				5272EC582A84CD2000075360 /* Sounds */,
 				868D15EC2A80D73D00C6D712 /* Fonts */,
 				868D15BE2A80CA9200C6D712 /* Info.plist */,
 				868D15BB2A80CA9200C6D712 /* LaunchScreen.storyboard */,
@@ -402,9 +427,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5272EC5D2A84CD4600075360 /* wick.wav in Resources */,
+				5272EC612A84D01400075360 /* bombAnimation.json in Resources */,
 				868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */,
+				5272EC5E2A84CD4600075360 /* blast.wav in Resources */,
 				868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */,
-				529BD7712A83B7DC0047DCC6 /* bombAnimation.json in Resources */,
+				5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */,
 				868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
