@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401783192A85088F00A9398D /* О Разном.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783182A85088F00A9398D /* О Разном.txt */; };
+		4017831C2A8508B700A9398D /* Спорт и Хобби.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4017831B2A8508B700A9398D /* Спорт и Хобби.txt */; };
+		4017831F2A8508D400A9398D /* Про Жизнь.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4017831E2A8508D400A9398D /* Про Жизнь.txt */; };
+		401783212A8508E600A9398D /* Знаменитости.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783202A8508E600A9398D /* Знаменитости.txt */; };
+		401783232A8508F100A9398D /* Исскуство и Кино.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783222A8508F100A9398D /* Исскуство и Кино.txt */; };
+		401783252A8508FD00A9398D /* Природа.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783242A8508FD00A9398D /* Природа.txt */; };
+		401783272A850B7100A9398D /* Наказания.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783262A850B7100A9398D /* Наказания.txt */; };
 		40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB97042A83F90C008EE64F /* GaneEndView.swift */; };
 		5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC592A84CD4600075360 /* heartBeat.wav */; };
 		5272EC5D2A84CD4600075360 /* wick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5A2A84CD4600075360 /* wick.wav */; };
@@ -43,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401783182A85088F00A9398D /* О Разном.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "О Разном.txt"; sourceTree = "<group>"; };
+		4017831B2A8508B700A9398D /* Спорт и Хобби.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Спорт и Хобби.txt"; sourceTree = "<group>"; };
+		4017831E2A8508D400A9398D /* Про Жизнь.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Про Жизнь.txt"; sourceTree = "<group>"; };
+		401783202A8508E600A9398D /* Знаменитости.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Знаменитости.txt"; sourceTree = "<group>"; };
+		401783222A8508F100A9398D /* Исскуство и Кино.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Исскуство и Кино.txt"; sourceTree = "<group>"; };
+		401783242A8508FD00A9398D /* Природа.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Природа.txt"; sourceTree = "<group>"; };
+		401783262A850B7100A9398D /* Наказания.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Наказания.txt"; sourceTree = "<group>"; };
 		40DB97042A83F90C008EE64F /* GaneEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaneEndView.swift; sourceTree = "<group>"; };
 		5272EC592A84CD4600075360 /* heartBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heartBeat.wav; sourceTree = "<group>"; };
 		5272EC5A2A84CD4600075360 /* wick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wick.wav; sourceTree = "<group>"; };
@@ -91,6 +105,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4017831A2A85089500A9398D /* Question&Punishments */ = {
+			isa = PBXGroup;
+			children = (
+				401783182A85088F00A9398D /* О Разном.txt */,
+				4017831B2A8508B700A9398D /* Спорт и Хобби.txt */,
+				4017831E2A8508D400A9398D /* Про Жизнь.txt */,
+				401783202A8508E600A9398D /* Знаменитости.txt */,
+				401783222A8508F100A9398D /* Исскуство и Кино.txt */,
+				401783242A8508FD00A9398D /* Природа.txt */,
+				401783262A850B7100A9398D /* Наказания.txt */,
+			);
+			path = "Question&Punishments";
+			sourceTree = "<group>";
+		};
 		40DB97062A83F9BD008EE64F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +254,7 @@
 		868D15E62A80D62600C6D712 /* CategoryModule */ = {
 			isa = PBXGroup;
 			children = (
+				4017831A2A85089500A9398D /* Question&Punishments */,
 				867B184F2A83D18200F7CAAA /* Model */,
 				868D15F32A80DCE900C6D712 /* Views */,
 				868D15EE2A80DCCF00C6D712 /* Controllers */,
@@ -430,10 +459,17 @@
 				5272EC5D2A84CD4600075360 /* wick.wav in Resources */,
 				5272EC612A84D01400075360 /* bombAnimation.json in Resources */,
 				868D15BD2A80CA9200C6D712 /* LaunchScreen.storyboard in Resources */,
+				401783212A8508E600A9398D /* Знаменитости.txt in Resources */,
 				5272EC5E2A84CD4600075360 /* blast.wav in Resources */,
+				401783192A85088F00A9398D /* О Разном.txt in Resources */,
 				868D15BA2A80CA9200C6D712 /* Assets.xcassets in Resources */,
+				401783252A8508FD00A9398D /* Природа.txt in Resources */,
+				4017831C2A8508B700A9398D /* Спорт и Хобби.txt in Resources */,
 				5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */,
+				4017831F2A8508D400A9398D /* Про Жизнь.txt in Resources */,
+				401783272A850B7100A9398D /* Наказания.txt in Resources */,
 				868D160B2A80F24B00C6D712 /* DelaGothicOne-Regular.ttf in Resources */,
+				401783232A8508F100A9398D /* Исскуство и Кино.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
