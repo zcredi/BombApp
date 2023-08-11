@@ -6,7 +6,7 @@ class MainViewController: UIViewController {
     private lazy var bombImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bomb")
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -26,7 +26,9 @@ class MainViewController: UIViewController {
         return button
     }()
     
-    // category button
+    //Continue Button
+    private lazy var continueButton = PurpleButton(text: "Продолжить")
+
     private lazy var categoryButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.borderWidth = 1
@@ -114,11 +116,21 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func continueButtonPressed() {
+        print("continue button pressed")
+        let gameVC = GameViewController()
+        navigationController?.pushViewController(gameVC, animated: true)
+            gameVC.isPaused = false
+            gameVC.stopOrResumeGame()
+    }
+    
     private func setConstraints() {
         view.addSubview(gameLabel)
         view.addSubview(bombLabel)
         view.addSubview(bombImageView)
         view.addSubview(startGameButton)
+        view.addSubview(continueButton)
+        continueButton.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
         view.addSubview(categoryButton)
         view.addSubview(rulesButton)
         
@@ -134,14 +146,19 @@ class MainViewController: UIViewController {
             bombImageView.topAnchor.constraint(equalTo: bombLabel.bottomAnchor),
             bombImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bombImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bombImageView.heightAnchor.constraint(equalToConstant: 400),
+            bombImageView.heightAnchor.constraint(equalToConstant: 350),
             
             startGameButton.topAnchor.constraint(equalTo: bombImageView.bottomAnchor),
             startGameButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             startGameButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             startGameButton.heightAnchor.constraint(equalToConstant: 75),
             
-            categoryButton.topAnchor.constraint(equalTo: startGameButton.bottomAnchor, constant: 15),
+            continueButton.topAnchor.constraint(equalTo: startGameButton.bottomAnchor, constant: 15),
+            continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            continueButton.heightAnchor.constraint(equalToConstant: 75),
+            
+            categoryButton.topAnchor.constraint(equalTo: continueButton.bottomAnchor, constant: 15),
             categoryButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             categoryButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             categoryButton.heightAnchor.constraint(equalToConstant: 75),
