@@ -58,9 +58,9 @@ extension GameEndView {
             
             warningLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             warningLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            warningLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            warningLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             
-            explosionImageView.heightAnchor.constraint(equalToConstant: 300),
+            explosionImageView.heightAnchor.constraint(equalToConstant: 280),
             explosionImageView.widthAnchor.constraint(equalToConstant: 250),
             explosionImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             explosionImageView.topAnchor.constraint(equalTo: warningLabel.bottomAnchor, constant: 30),
@@ -70,12 +70,12 @@ extension GameEndView {
             questLabel.topAnchor.constraint(equalTo: explosionImageView.bottomAnchor, constant: 30),
             
             nextQuestButton.heightAnchor.constraint(equalToConstant: 80),
-            nextQuestButton.widthAnchor.constraint(equalToConstant: 275),
+            nextQuestButton.widthAnchor.constraint(equalToConstant: 280),
             nextQuestButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            nextQuestButton.topAnchor.constraint(equalTo: questLabel.bottomAnchor, constant: 30),
+            nextQuestButton.topAnchor.constraint(equalTo: questLabel.bottomAnchor, constant: 20),
             
             repeatButton.heightAnchor.constraint(equalToConstant: 80),
-            repeatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70),
+            repeatButton.widthAnchor.constraint(equalToConstant: 280),
             repeatButton.topAnchor.constraint(equalTo: nextQuestButton.bottomAnchor, constant: 15),
             repeatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])

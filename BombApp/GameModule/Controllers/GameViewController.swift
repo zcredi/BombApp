@@ -1,17 +1,13 @@
-//
-//  GameViewController.swift
-//  BombApp
-//
-//  Created by Владислав on 07.08.2023.
-//
-
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+    var question = Question()
+    var arrayQuestions = [String]()
     private let gameStartView = GameStartView()
     private let questLogic = QuestLogic()
     private var questModel = QuestModel()
+    private var currentQuestion: String = ""
     
     var timer: Timer?
     private var count = 5
@@ -19,10 +15,16 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
         setConstraints()
         setupNavigationBar()
+        question.generateQuestions()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
+        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
     }
     
     private func updateUI() {
@@ -32,11 +34,14 @@ class GameViewController: UIViewController {
     
     private func setupNavigationBar() {
         createCustomNavigationBar()
-        
         let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
+        
         let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
         navigationItem.titleView = sceneTitleView
         navigationItem.rightBarButtonItems = [gameStopButton]
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
     
     @objc func stopOrResumeGame() {
@@ -46,19 +51,23 @@ class GameViewController: UIViewController {
             questLogic.pauseSounds()
             questModel.stopAnimationView()
             isPaused = false
+            gameStartView.gameLabel.text = "Пауза"
         } else {
             createTimer()
             isPaused = true
             questLogic.playBackgroundSound()
             questModel.playAnimationView()
             addAnimationViewOnScreen()
+            gameStartView.gameLabel.text = currentQuestion
         }
     }
     
     @objc func startButtonPressed() {
         print("button is hidden and title changed")
         gameStartView.startButton.isHidden = true
-        gameStartView.gameLabel.text = "Назовите зимний вид спорта"
+        
+        currentQuestion = arrayQuestions.randomElement() ?? "None"
+        gameStartView.gameLabel.text = currentQuestion
         if gameStartView.startButton.isHidden {
             gameStartView.bombImageView.isHidden = true
             
