@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MyCollectionViewCellDelegate: NSObject {
+protocol MyCollectionViewCellDelegate: AnyObject {
     func didSelectItem(_ button: UIButton)
 }
 
@@ -17,7 +17,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    private lazy var myLabel: UILabel = {
+    lazy var categoryLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.textColor = .yellowColor
@@ -42,7 +42,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(myImageView)
-        contentView.addSubview(myLabel)
+        contentView.addSubview(categoryLabel)
         contentView.addSubview(selectButton)
 
         NSLayoutConstraint.activate([
@@ -53,10 +53,10 @@ class MyCollectionViewCell: UICollectionViewCell {
             myImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
             myImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.6),
 
-            myLabel.topAnchor.constraint(equalTo: myImageView.bottomAnchor),
-            myLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            myLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            myLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
+            categoryLabel.topAnchor.constraint(equalTo: myImageView.bottomAnchor),
+            categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
         ])
     }
 
@@ -71,6 +71,16 @@ class MyCollectionViewCell: UICollectionViewCell {
 
     func configure(with image: UIImage, title: String) {
         myImageView.image = image
-        myLabel.text = title
+        categoryLabel.text = title
+    }
+    func setSelectionState(isSelected: Bool) {
+        let configuration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular)
+        let imageCircle = UIImage(systemName: "circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let checkmark = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        if isSelected {
+            selectButton.setImage(checkmark?.withConfiguration(configuration), for: .normal)
+        } else {
+            selectButton.setImage(imageCircle?.withConfiguration(configuration), for: .normal)
+        }
     }
 }

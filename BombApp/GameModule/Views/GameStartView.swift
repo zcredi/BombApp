@@ -50,9 +50,9 @@ extension GameStartView {
         NSLayoutConstraint.activate([
         
             gameLabel.heightAnchor.constraint(equalToConstant: 115),
-            gameLabel.widthAnchor.constraint(equalToConstant: 329),
-            gameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            gameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            gameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            gameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             
             bombImageView.heightAnchor.constraint(equalToConstant: 350),
             bombImageView.widthAnchor.constraint(equalToConstant: 310),
