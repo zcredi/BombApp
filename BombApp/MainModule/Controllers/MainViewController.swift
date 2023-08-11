@@ -119,9 +119,10 @@ class MainViewController: UIViewController {
     @objc func continueButtonPressed() {
         print("continue button pressed")
         let gameVC = GameViewController()
+        gameVC.isPaused = false
+        gameVC.stopOrResumeGame()
+        gameVC.gameStartView.gameLabel.text = UserDefaults.standard.string(forKey: "CurrentQuestion")
         navigationController?.pushViewController(gameVC, animated: true)
-            gameVC.isPaused = false
-            gameVC.stopOrResumeGame()
     }
     
     private func setConstraints() {
@@ -135,7 +136,7 @@ class MainViewController: UIViewController {
         view.addSubview(rulesButton)
         
         NSLayoutConstraint.activate([
-            gameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            gameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             gameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             gameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
