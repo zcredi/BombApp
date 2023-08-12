@@ -9,6 +9,7 @@ class GameViewController: UIViewController {
     var questModel = QuestModel()
     var currentQuestion: String = ""
     var isContinueButtonPressed: Bool = false
+    var isPlayMusic = true
     
     var timer: Timer?
     var count = UserDefaults.standard.integer(forKey: "GameTime") as! Int
@@ -23,17 +24,12 @@ class GameViewController: UIViewController {
         setupNavigationBar()
         question.generateQuestions()
     }
-    
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
-        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
+        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
+        isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
     }
     
     private func updateUI() {
@@ -70,10 +66,12 @@ class GameViewController: UIViewController {
             createTimer()
             gameStartView.gameLabel.text = currentQuestion
             isPaused = true
-            questLogic.playBackgroundSound()
+            if isPlayMusic{
+                questLogic.playBackgroundSound()
+            }
             gameStartView.startButton.isHidden = true
             gameStartView.bombImageView.isHidden = true
-//            questModel.createAnimationView()
+
             questModel.playAnimationView()
             addAnimationViewOnScreen()
             
@@ -97,9 +95,11 @@ class GameViewController: UIViewController {
             navigationItem.rightBarButtonItems = [gameStopButton]
             questModel.createAnimationView()
             addAnimationViewOnScreen()
-            
             createTimer()
-            questLogic.playBackgroundSound()
+            if isPlayMusic{
+                questLogic.playBackgroundSound()
+            }
+            
         }
         
     }

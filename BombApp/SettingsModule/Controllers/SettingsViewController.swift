@@ -39,22 +39,36 @@ class SettingsViewController: UIViewController {
         return sv
     }()
     
+    
+    private lazy var gameWithTasks: UISwitch = {
+        let switchChallenge = UISwitch()
+        switchChallenge.tag = 0
+        switchChallenge.onTintColor = .purpleColor
+        switchChallenge.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        switchChallenge.translatesAutoresizingMaskIntoConstraints = false
+        return switchChallenge
+    }()
+    
+    
+    private lazy var backgroundMusic: UISwitch = {
+        let switchChallenge = UISwitch()
+        switchChallenge.tag = 1
+        switchChallenge.onTintColor = .purpleColor
+        switchChallenge.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        switchChallenge.translatesAutoresizingMaskIntoConstraints = false
+        return switchChallenge
+    }()
     private lazy var segmentedGame: UISegmentedControl = {
         let segment = UISegmentedControl(items: ["Короткое", "Среднее", "Длинное", "Случайное"])
         segment.selectedSegmentIndex = 0
         segment.selectedSegmentTintColor = .purpleColor
+        
         return segment
     }()
     
     private lazy var row2StackView: UIStackView = {
         let sv = UIStackView()
-        let switchChallenge = UISwitch()
-        switchChallenge.tag = 0
-        switchChallenge.translatesAutoresizingMaskIntoConstraints = false
         let svView = UIView()
-        
-        switchChallenge.onTintColor = .purpleColor
-        switchChallenge.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         sv.axis = .horizontal
         sv.distribution = .fillEqually
         sv.spacing = 10
@@ -62,11 +76,11 @@ class SettingsViewController: UIViewController {
         sv.addArrangedSubview(svView)
         challengeLabel.numberOfLines = 1
         challengeLabel.textAlignment = .center
-        svView.addSubview(switchChallenge)
+        svView.addSubview(gameWithTasks)
         NSLayoutConstraint.activate([
-            switchChallenge.topAnchor.constraint(equalTo: svView.topAnchor, constant: 30),
-            switchChallenge.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -30),
-            switchChallenge.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -10),
+            gameWithTasks.topAnchor.constraint(equalTo: svView.topAnchor, constant: 30),
+            gameWithTasks.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -30),
+            gameWithTasks.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -10),
         ])
         settingsSV.addArrangedSubview(sv)
         return sv
@@ -74,12 +88,7 @@ class SettingsViewController: UIViewController {
     
     private lazy var row3StackView: UIStackView = {
         let sv = UIStackView()
-        let switchChallenge = UISwitch()
-        switchChallenge.tag = 1
-        switchChallenge.translatesAutoresizingMaskIntoConstraints = false
         let svView = UIView()
-        
-        switchChallenge.onTintColor = .purpleColor
         sv.axis = .horizontal
         sv.distribution = .fillEqually
         sv.spacing = 10
@@ -87,11 +96,11 @@ class SettingsViewController: UIViewController {
         music.textAlignment = .center
         sv.addArrangedSubview(music)
         sv.addArrangedSubview(svView)
-        svView.addSubview(switchChallenge)
+        svView.addSubview(backgroundMusic)
         NSLayoutConstraint.activate([
-            switchChallenge.topAnchor.constraint(equalTo: svView.topAnchor, constant: 30),
-            switchChallenge.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -30),
-            switchChallenge.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -10)
+            backgroundMusic.topAnchor.constraint(equalTo: svView.topAnchor, constant: 30),
+            backgroundMusic.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -30),
+            backgroundMusic.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -10)
         ])
         settingsSV.addArrangedSubview(sv)
         return sv
@@ -114,7 +123,6 @@ class SettingsViewController: UIViewController {
             label.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -20),
             label.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -20)
         ])
-        
         return sv
     }()
     
@@ -157,7 +165,19 @@ class SettingsViewController: UIViewController {
         ])
         return sv
     }()
-    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        var segmentedIndex = UserDefaults.standard.integer(forKey: "GameTime")
+        switch segmentedIndex{
+            case 15: segmentedGame.selectedSegmentIndex = 0
+            case 30: segmentedGame.selectedSegmentIndex = 1
+            case 60: segmentedGame.selectedSegmentIndex = 2
+            case 15...60: segmentedGame.selectedSegmentIndex = 3
+            default: break
+        }
+        gameWithTasks.setOn(UserDefaults.standard.bool(forKey: "gameWithChallenge"), animated: true)
+        backgroundMusic.setOn(UserDefaults.standard.bool(forKey: "gameWithMusic"), animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
@@ -189,9 +209,13 @@ class SettingsViewController: UIViewController {
             case 3: UserDefaults.standard.set(Int.random(in: 15...60), forKey: "GameTime")
             default: break
         }
+        
+        
     }
     @IBAction func switchValueChanged(_ sender: UISwitch){
-        let value = sender.isOn
+        
+        var value = sender.isOn
+        print(value)
         switch sender.tag{
             case 0: UserDefaults.standard.set(value, forKey: "gameWithChallenge")
             case 1: UserDefaults.standard.set(value, forKey: "gameWithMusic")
