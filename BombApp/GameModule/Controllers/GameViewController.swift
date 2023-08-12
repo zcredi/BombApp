@@ -8,9 +8,10 @@ class GameViewController: UIViewController {
     private let questLogic = QuestLogic()
     private var questModel = QuestModel()
     var currentQuestion: String = ""
+    var isContinueButtonPressed: Bool = false
     
     var timer: Timer?
-    private var count = 5
+    var count = 30
     private var passedSeconds = 0
     var isPaused = true
     
@@ -21,27 +22,28 @@ class GameViewController: UIViewController {
         setupNavigationBar()
         question.generateQuestions()
     }
+    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UserDefaults.standard.set(currentQuestion, forKey: "CurrentQuestion")
-        
-    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        gameStartView.gameLabel.text = currentQuestion
         arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
         arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
         
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed 
     }
     
     private func updateUI() {
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
         view.addSubview(gameStartView)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        questLogic.pauseSounds()
+        UserDefaults.standard.set(count, forKey: "SecondsCount")
     }
     
     private func setupNavigationBar() {
@@ -53,10 +55,7 @@ class GameViewController: UIViewController {
         navigationItem.rightBarButtonItems = [gameStopButton]
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-    }
+    
     
     @objc func stopOrResumeGame() {
         print("Game stop/resume")
@@ -68,6 +67,7 @@ class GameViewController: UIViewController {
             gameStartView.gameLabel.text = "Пауза"
         } else {
             createTimer()
+            gameStartView.gameLabel.text = currentQuestion
             isPaused = true
             questLogic.playBackgroundSound()
             gameStartView.startButton.isHidden = true
@@ -75,15 +75,17 @@ class GameViewController: UIViewController {
             questModel.createAnimationView()
             questModel.playAnimationView()
             addAnimationViewOnScreen()
-            gameStartView.gameLabel.text = currentQuestion
+            
         }
     }
     
     @objc func startButtonPressed() {
+        navigationItem.rightBarButtonItem?.isEnabled = true
         print("button is hidden and title changed")
         gameStartView.startButton.isHidden = true
         
         currentQuestion = arrayQuestions.randomElement() ?? "None"
+        UserDefaults.standard.set(currentQuestion, forKey: "CurrentQuestion")
         gameStartView.gameLabel.text = currentQuestion
         if gameStartView.startButton.isHidden {
             gameStartView.bombImageView.isHidden = true
@@ -106,7 +108,6 @@ class GameViewController: UIViewController {
     }
         
     @objc private func updateTimer() {
-        print(count)
         if count != 0 {
             count -= 1
             passedSeconds += 1
@@ -137,10 +138,10 @@ class GameViewController: UIViewController {
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
+        
         gameStartView.addSubview(bombView)
         let bombAnimationView = questModel.animationView
         bombView.addSubview(bombAnimationView)
-            
         NSLayoutConstraint.activate([
             bombAnimationView.trailingAnchor.constraint(equalTo: gameStartView.trailingAnchor, constant: -10),
             bombAnimationView.leadingAnchor.constraint(equalTo: gameStartView.leadingAnchor, constant: 10),

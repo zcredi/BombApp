@@ -67,17 +67,19 @@ extension GameEndView {
             
             questLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             questLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            questLabel.topAnchor.constraint(equalTo: explosionImageView.bottomAnchor, constant: 30),
+            questLabel.topAnchor.constraint(equalTo: explosionImageView.bottomAnchor, constant: 20),
             
             nextQuestButton.heightAnchor.constraint(equalToConstant: 80),
-            nextQuestButton.widthAnchor.constraint(equalToConstant: 280),
-            nextQuestButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            nextQuestButton.topAnchor.constraint(equalTo: questLabel.bottomAnchor, constant: 20),
+            nextQuestButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            nextQuestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            nextQuestButton.bottomAnchor.constraint(equalTo: repeatButton.topAnchor, constant: -15),
             
             repeatButton.heightAnchor.constraint(equalToConstant: 80),
-            repeatButton.widthAnchor.constraint(equalToConstant: 280),
-            repeatButton.topAnchor.constraint(equalTo: nextQuestButton.bottomAnchor, constant: 15),
-            repeatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            repeatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            repeatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            repeatButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            
         ])
     }
 }
