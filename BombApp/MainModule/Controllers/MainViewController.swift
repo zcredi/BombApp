@@ -4,6 +4,7 @@ class MainViewController: UIViewController {
     var isStartButtonPressed: Bool = false
     
     private var categoryCount = [String]()
+    private var questModel = QuestModel()
     
     private lazy var bombImageView: UIImageView = {
         let imageView = UIImageView()
@@ -116,11 +117,13 @@ class MainViewController: UIViewController {
     }
     
     @objc func continueButtonPressed() {
-        if isStartButtonPressed{
+        let gameVC = GameViewController()
+        gameVC.questModel.createAnimationView()
+        
+        if isStartButtonPressed {
             
             let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
             let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
-            let gameVC = GameViewController()
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
             gameVC.stopOrResumeGame()

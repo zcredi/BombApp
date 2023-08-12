@@ -6,7 +6,7 @@ class GameViewController: UIViewController {
     let gameStartView = GameStartView()
     private let mainViewController = MainViewController()
     private let questLogic = QuestLogic()
-    private var questModel = QuestModel()
+    var questModel = QuestModel()
     var currentQuestion: String = ""
     var isContinueButtonPressed: Bool = false
     
@@ -72,7 +72,7 @@ class GameViewController: UIViewController {
             questLogic.playBackgroundSound()
             gameStartView.startButton.isHidden = true
             gameStartView.bombImageView.isHidden = true
-            questModel.createAnimationView()
+//            questModel.createAnimationView()
             questModel.playAnimationView()
             addAnimationViewOnScreen()
             
@@ -132,7 +132,7 @@ class GameViewController: UIViewController {
         ])
     }
         
-    private func addAnimationViewOnScreen() {
+    public func addAnimationViewOnScreen() {
         let bombView: UIView = {
             let view = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
