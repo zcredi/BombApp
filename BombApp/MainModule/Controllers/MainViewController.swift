@@ -1,8 +1,10 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    var isStartButtonPressed: Bool = false
+    
     private var categoryCount = [String]()
-    // bomb picture
+    
     private lazy var bombImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bomb")
@@ -11,39 +13,36 @@ class MainViewController: UIViewController {
         return imageView
     }()
     
-    // start game button
-    private lazy var startGameButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular24()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 40
-        button.setTitle("Старт игры", for: .normal)
+    
+    private lazy var startGameButton: PurpleButton = {
+        let button = PurpleButton(text: "Старт Игры")
         button.addTarget(self, action: #selector(startGameButtonTapped(_:)), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    //Continue Button
+    
     private lazy var continueButton = PurpleButton(text: "Продолжить")
-
-    private lazy var categoryButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular24()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 40
-        button.setTitle("Категории", for: .normal)
+    
+    private lazy var categoryButton: PurpleButton = {
+        let button = PurpleButton(text: "Категории")
         button.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    // rules button
+    private lazy var settingsButton: PurpleButton = {
+        let button = PurpleButton()
+        button.layer.cornerRadius = 25
+        button.backgroundColor = .specialPurpleColor
+        let configuration = UIImage.SymbolConfiguration(pointSize: 25, weight: .regular)
+        let image = UIImage(systemName: "gearshape.fill")?.withTintColor(.yellowColor, renderingMode: .alwaysOriginal)
+        button.setImage(image?.withConfiguration(configuration), for: .normal)
+        button.addTarget(self, action: #selector(settingsButtonPressed(_:)), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private lazy var rulesButton: UIButton = {
         let button = UIButton(type: .system)
         button.clipsToBounds = true
@@ -60,7 +59,7 @@ class MainViewController: UIViewController {
         return button
     }()
     
-    // label игра компании
+    
     private lazy var gameLabel: UILabel = {
         let label = UILabel()
         label.text = "Игра для компании"
@@ -71,7 +70,7 @@ class MainViewController: UIViewController {
         return label
     }()
     
-    // label бомба название
+    
     private lazy var bombLabel: UILabel = {
         let label = UILabel()
         label.text = "Бомба"
@@ -93,6 +92,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func startGameButtonTapped(_ sender: UIButton) {
+        isStartButtonPressed = true
         categoryCount = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
         if categoryCount.isEmpty {
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "Выберите минимум одну категорию для начала игры")
@@ -111,20 +111,34 @@ class MainViewController: UIViewController {
     }
     
     @objc func rulesButtonTapped() {
-        // Write code to push RulesViewController
         let vc = RulesViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func continueButtonPressed() {
-        print("continue button pressed")
-        let gameVC = GameViewController()
-        gameVC.isPaused = false
-        gameVC.stopOrResumeGame()
-        gameVC.gameStartView.gameLabel.text = UserDefaults.standard.string(forKey: "CurrentQuestion")
-        navigationController?.pushViewController(gameVC, animated: true)
+        if isStartButtonPressed{
+            
+            let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
+            let gameVC = GameViewController()
+            gameVC.isContinueButtonPressed = true
+            gameVC.isPaused = false
+            gameVC.stopOrResumeGame()
+            gameVC.currentQuestion = gameLabelText
+            gameVC.gameStartView.gameLabel.text = gameLabelText
+            gameVC.count = secondsCount
+            navigationController?.pushViewController(gameVC, animated: true)
+        }else{
+            let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "У вас сейчас нету активной игры")
+            alertController.modalPresentationStyle = .overCurrentContext
+            alertController.modalTransitionStyle = .crossDissolve
+            self.present(alertController, animated: true)
+        }
     }
-    
+    @objc func settingsButtonPressed(_ sender: UIButton){
+        let vc = SettingsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     private func setConstraints() {
         view.addSubview(gameLabel)
         view.addSubview(bombLabel)
@@ -134,6 +148,7 @@ class MainViewController: UIViewController {
         continueButton.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
         view.addSubview(categoryButton)
         view.addSubview(rulesButton)
+        view.addSubview(settingsButton)
         
         NSLayoutConstraint.activate([
             gameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
@@ -167,7 +182,14 @@ class MainViewController: UIViewController {
             rulesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             rulesButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             rulesButton.heightAnchor.constraint(equalToConstant: 50),
-            rulesButton.widthAnchor.constraint(equalTo: rulesButton.heightAnchor)
+            rulesButton.widthAnchor.constraint(equalTo: rulesButton.heightAnchor),
+            
+            
+            settingsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            settingsButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            settingsButton.heightAnchor.constraint(equalToConstant: 50),
+            settingsButton.widthAnchor.constraint(equalTo: settingsButton.heightAnchor)
+            
         ])
     }
 }

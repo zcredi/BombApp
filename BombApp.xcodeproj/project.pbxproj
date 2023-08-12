@@ -15,6 +15,7 @@
 		401783252A8508FD00A9398D /* Природа.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783242A8508FD00A9398D /* Природа.txt */; };
 		401783272A850B7100A9398D /* Наказания.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783262A850B7100A9398D /* Наказания.txt */; };
 		40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB97042A83F90C008EE64F /* GaneEndView.swift */; };
+		40F883A62A86C56E00B951F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F883A52A86C56E00B951F3 /* SettingsViewController.swift */; };
 		5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC592A84CD4600075360 /* heartBeat.wav */; };
 		5272EC5D2A84CD4600075360 /* wick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5A2A84CD4600075360 /* wick.wav */; };
 		5272EC5E2A84CD4600075360 /* blast.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5B2A84CD4600075360 /* blast.wav */; };
@@ -58,6 +59,7 @@
 		401783242A8508FD00A9398D /* Природа.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Природа.txt"; sourceTree = "<group>"; };
 		401783262A850B7100A9398D /* Наказания.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Наказания.txt"; sourceTree = "<group>"; };
 		40DB97042A83F90C008EE64F /* GaneEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaneEndView.swift; sourceTree = "<group>"; };
+		40F883A52A86C56E00B951F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5272EC592A84CD4600075360 /* heartBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heartBeat.wav; sourceTree = "<group>"; };
 		5272EC5A2A84CD4600075360 /* wick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wick.wav; sourceTree = "<group>"; };
 		5272EC5B2A84CD4600075360 /* blast.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blast.wav; sourceTree = "<group>"; };
@@ -154,6 +156,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		40F883A32A86C53B00B951F3 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				40F883A42A86C55200B951F3 /* Controllers */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		40F883A42A86C55200B951F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40F883A52A86C56E00B951F3 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5272EC572A84CD1700075360 /* Gif JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +245,7 @@
 				868D15E72A80D63400C6D712 /* GameModule */,
 				868D15E82A80D64000C6D712 /* GameEndModule */,
 				868D15E92A80D64C00C6D712 /* RulesModule */,
+				40F883A32A86C53B00B951F3 /* SettingsModule */,
 				868D15EB2A80D6CF00C6D712 /* SupportingFiles */,
 			);
 			path = BombApp;
@@ -503,6 +522,7 @@
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
 				867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */,
 				867B186A2A83D7C600F7CAAA /* UIStackView+App.swift in Sources */,
+				40F883A62A86C56E00B951F3 /* SettingsViewController.swift in Sources */,
 				867B18622A83D7A600F7CAAA /* BackgroundColor.swift in Sources */,
 				867B18612A83D7A600F7CAAA /* PurpleButton.swift in Sources */,
 			);
