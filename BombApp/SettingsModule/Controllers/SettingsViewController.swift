@@ -1,12 +1,24 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    private let timeLabel = UILabel(text: "Время игры", font: .delaGothicOneRegular20(), color: .purpleColor)
-    private let challengeLabel = UILabel(text: "Игра с Заданиями", font: .delaGothicOneRegular20(), color: .purpleColor)
-    private let music = UILabel(text: "Фоновая музыка", font: .delaGothicOneRegular20(), color: .purpleColor)
-    private let musicLabel = UILabel(text: "Фоновая музыка", font: .delaGothicOneRegular20(), color: .purpleColor)
-    private let tickingBomb = UILabel(text: "Тиканье Бомбы", font: .delaGothicOneRegular20(), color: .purpleColor)
-    private let bombBlast = UILabel(text: "Взрыв бомбы", font: .delaGothicOneRegular20(), color: .purpleColor)
+    private let timeLabel = UILabel(text: "Время игры",
+                                    font: .delaGothicOneRegular20(),
+                                    color: .purpleColor)
+    private let challengeLabel = UILabel(text: "Игра с Заданиями",
+                                         font: .delaGothicOneRegular20(),
+                                         color: .purpleColor)
+    private let music = UILabel(text: "Фоновая музыка",
+                                font: .delaGothicOneRegular20(),
+                                color: .purpleColor)
+    private let musicLabel = UILabel(text: "Фоновая музыка",
+                                     font: .delaGothicOneRegular20(),
+                                     color: .purpleColor)
+    private let tickingBomb = UILabel(text: "Тиканье Бомбы",
+                                      font: .delaGothicOneRegular20(),
+                                      color: .purpleColor)
+    private let bombBlast = UILabel(text: "Взрыв бомбы",
+                                    font: .delaGothicOneRegular20(),
+                                    color: .purpleColor)
     
     private lazy var settingsSV: UIStackView = {
         let sv = UIStackView()
@@ -37,10 +49,12 @@ class SettingsViewController: UIViewController {
     private lazy var row2StackView: UIStackView = {
         let sv = UIStackView()
         let switchChallenge = UISwitch()
+        switchChallenge.tag = 0
         switchChallenge.translatesAutoresizingMaskIntoConstraints = false
         let svView = UIView()
         
         switchChallenge.onTintColor = .purpleColor
+        switchChallenge.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         sv.axis = .horizontal
         sv.distribution = .fillEqually
         sv.spacing = 10
@@ -53,8 +67,6 @@ class SettingsViewController: UIViewController {
             switchChallenge.topAnchor.constraint(equalTo: svView.topAnchor, constant: 30),
             switchChallenge.trailingAnchor.constraint(equalTo: svView.trailingAnchor, constant: -30),
             switchChallenge.bottomAnchor.constraint(equalTo: svView.bottomAnchor, constant: -10),
-            
-            
         ])
         settingsSV.addArrangedSubview(sv)
         return sv
@@ -63,6 +75,7 @@ class SettingsViewController: UIViewController {
     private lazy var row3StackView: UIStackView = {
         let sv = UIStackView()
         let switchChallenge = UISwitch()
+        switchChallenge.tag = 1
         switchChallenge.translatesAutoresizingMaskIntoConstraints = false
         let svView = UIView()
         
@@ -169,5 +182,20 @@ class SettingsViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        switch segmentedGame.selectedSegmentIndex {
+            case 0: UserDefaults.standard.set(15, forKey: "GameTime")
+            case 1: UserDefaults.standard.set(30, forKey: "GameTime")
+            case 2: UserDefaults.standard.set(60, forKey: "GameTime")
+            case 3: UserDefaults.standard.set(Int.random(in: 15...60), forKey: "GameTime")
+            default: break
+        }
+    }
+    @IBAction func switchValueChanged(_ sender: UISwitch){
+        let value = sender.isOn
+        switch sender.tag{
+            case 0: UserDefaults.standard.set(value, forKey: "gameWithChallenge")
+            case 1: UserDefaults.standard.set(value, forKey: "gameWithMusic")
+            default: break
+        }
     }
 }

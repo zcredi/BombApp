@@ -11,7 +11,8 @@ class GameViewController: UIViewController {
     var isContinueButtonPressed: Bool = false
     
     var timer: Timer?
-    var count = 30
+    var count = UserDefaults.standard.integer(forKey: "GameTime") as! Int
+    
     private var passedSeconds = 0
     var isPaused = true
     
@@ -32,7 +33,7 @@ class GameViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed 
+        navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
     }
     
     private func updateUI() {
