@@ -1,7 +1,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    var isStartButtonPressed: Bool = false
+    private var isStartButtonPressed: Bool = false
     
     private var categoryCount = [String]()
     private var questModel = QuestModel()
@@ -56,7 +56,6 @@ class MainViewController: UIViewController {
         button.setTitle("?", for: .normal)
         button.addTarget(self, action: #selector(rulesButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-            
         return button
     }()
     
@@ -117,13 +116,13 @@ class MainViewController: UIViewController {
     }
     
     @objc func continueButtonPressed() {
+        let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+        let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
+        let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
         let gameVC = GameViewController()
         gameVC.questModel.createAnimationView()
-        
+        gameVC.isPlayMusic = playSound
         if isStartButtonPressed {
-            
-            let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
-            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
             gameVC.stopOrResumeGame()

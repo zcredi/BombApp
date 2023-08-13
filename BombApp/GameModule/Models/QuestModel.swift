@@ -1,10 +1,3 @@
-//
-//  QuestModel.swift
-//  BombApp
-//
-//  Created by Evgenii Mazrukho on 09.08.2023.
-//
-
 import Foundation
 import Lottie
 

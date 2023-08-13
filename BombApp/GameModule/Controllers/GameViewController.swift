@@ -1,17 +1,20 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    private let mainViewController = MainViewController()
+    private let questLogic = QuestLogic()
     var question = Question()
     var arrayQuestions = [String]()
     let gameStartView = GameStartView()
-    private let mainViewController = MainViewController()
-    private let questLogic = QuestLogic()
     var questModel = QuestModel()
     var currentQuestion: String = ""
     var isContinueButtonPressed: Bool = false
+    var isPlayMusic = true
     
     var timer: Timer?
-    var count = 30
+    var count = UserDefaults.standard.integer(forKey: "GameTime") as! Int
+    
     private var passedSeconds = 0
     var isPaused = true
     
@@ -22,17 +25,12 @@ class GameViewController: UIViewController {
         setupNavigationBar()
         question.generateQuestions()
     }
-    
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
-        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed 
+        navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
+        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
+        isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
     }
     
     private func updateUI() {
@@ -49,7 +47,6 @@ class GameViewController: UIViewController {
     private func setupNavigationBar() {
         createCustomNavigationBar()
         let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
-        
         let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
         navigationItem.titleView = sceneTitleView
         navigationItem.rightBarButtonItems = [gameStopButton]
@@ -69,10 +66,12 @@ class GameViewController: UIViewController {
             createTimer()
             gameStartView.gameLabel.text = currentQuestion
             isPaused = true
-            questLogic.playBackgroundSound()
+            if isPlayMusic{
+                questLogic.playBackgroundSound()
+            }
             gameStartView.startButton.isHidden = true
             gameStartView.bombImageView.isHidden = true
-//            questModel.createAnimationView()
+
             questModel.playAnimationView()
             addAnimationViewOnScreen()
             
@@ -89,16 +88,17 @@ class GameViewController: UIViewController {
         gameStartView.gameLabel.text = currentQuestion
         if gameStartView.startButton.isHidden {
             gameStartView.bombImageView.isHidden = true
-            
             let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
             let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
             navigationItem.titleView = sceneTitleView
             navigationItem.rightBarButtonItems = [gameStopButton]
             questModel.createAnimationView()
             addAnimationViewOnScreen()
-            
             createTimer()
-            questLogic.playBackgroundSound()
+            if isPlayMusic{
+                questLogic.playBackgroundSound()
+            }
+            
         }
         
     }
@@ -117,7 +117,9 @@ class GameViewController: UIViewController {
             navigationController?.pushViewController(GameEndViewController(), animated: true)
             questModel.stopAnimationView()
             deleteAnimationView()
-            questLogic.playBlastSound()
+            if isPlayMusic{
+                questLogic.playBlastSound()
+            }
         }
     }
         

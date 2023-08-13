@@ -1,10 +1,3 @@
-//
-//  Extension + UIViewController.swift
-//  BombApp
-//
-//  Created by Daria Arisova on 09.08.2023.
-//
-
 import UIKit
 
 extension UIViewController {

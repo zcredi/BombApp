@@ -12,42 +12,17 @@ class RulesView: UIView {
     private let rulesLabel = UILabel(text: "Правила игры",
                                      font: UIFont.delaGothicOneRegular32()!,
                                      color: .purpleColor)
-    
-    private let firstRule = UILabel(
-        text: "Все игроки становятся в круг.",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    )
-    private lazy var firstRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("1", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let secondRule = UILabel(
-        text: "Первый игрок берет телефон и нажимает кнопку:",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    )
-    private lazy var secondRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("2", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    // start game button
+    private var rulesLabelArray: [UILabel] = []
+    private var rulesIndexBtnArray: [UIButton] = []
+    private let rulesTextArray = [
+        "Все игроки становятся в круг.",
+        "Первый игрок берет телефон и нажимает кнопку:",
+        "На экране появляется вопрос “Назовите Фрукт”.",
+        "Игрок отвечает на вопрос и после правильного ответа передает телефон следующему игроку (правильность ответа определяют другие участники).",
+        "Игроки по кругу отвечают на один и тот же вопрос до тех пор, пока не взорвется бомба.",
+        "Проигравшим считается тот, в чьих руках взорвалась бомба.",
+        "Если в настройках выбран режим игры “С Заданиями”, то проигравший выполняет задание."
+    ]
     private lazy var startGameButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.borderWidth = 1
@@ -57,92 +32,6 @@ class RulesView: UIView {
         button.backgroundColor = .purpleColor
         button.layer.cornerRadius = 15
         button.setTitle("Старт игры", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let thirdRule = UILabel(
-        text: "На экране появляется вопрос “Назовите Фрукт”.",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    )
-    private lazy var thirdRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("3", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let fourthRule = UILabel(
-        text: "Игрок отвечает на вопрос и после правильного ответа передает телефон следующему игроку (правильность ответа определяют другие участники).",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .black
-    )
-    private lazy var fourthRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("4", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let fifthRule = UILabel(
-        text: "Игроки по кругу отвечают на один и тот же вопрос до тех пор, пока не взорвется бомба.",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    
-    )
-    private lazy var fifthRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("5", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let sixthRule = UILabel(
-        text: "Проигравшим считается тот, в чьих руках взорвалась бомба.",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    )
-    private lazy var sixthRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("6", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    private let seventhRule = UILabel(
-        text: "",
-        font: UIFont.delaGothicOneRegular16()!,
-        color: .blackColor
-    )
-    private lazy var seventhRuleButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.blackColor.cgColor
-        button.titleLabel?.font = UIFont.delaGothicOneRegular16()
-        button.tintColor = .yellowColor
-        button.backgroundColor = .purpleColor
-        button.layer.cornerRadius = 16
-        button.setTitle("7", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -158,43 +47,53 @@ class RulesView: UIView {
     }
     
     private func updateUI() {
-        let string = NSMutableAttributedString(string: "Если в настройках выбран режим игры “С Заданиями”, то проигравший выполняет задание.")
-        string.setColorForText("“С Заданиями”", with: .purpleColor)
-        seventhRule.attributedText = string
-        
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(rulesLabel)
-        firstRule.numberOfLines = 0
-        fifthRule.textAlignment = .center
-        secondRule.numberOfLines = 0
-        secondRule.textAlignment = .center
-        thirdRule.numberOfLines = 0
-        thirdRule.textAlignment = .center
-        fourthRule.numberOfLines = 0
-        fourthRule.textAlignment = .center
-        fifthRule.numberOfLines = 0
-        fifthRule.textAlignment = .center
-        sixthRule.numberOfLines = 0
-        sixthRule.textAlignment = .center
-        seventhRule.numberOfLines = 0
-        seventhRule.textAlignment = .center
-        addSubview(firstRule)
-        addSubview(firstRuleButton)
-        addSubview(secondRule)
-        addSubview(secondRuleButton)
         addSubview(startGameButton)
-        addSubview(thirdRule)
-        addSubview(thirdRuleButton)
-        addSubview(fourthRule)
-        addSubview(fourthRuleButton)
-        addSubview(fifthRule)
-        addSubview(fifthRuleButton)
-        addSubview(sixthRule)
-        addSubview(sixthRuleButton)
-        addSubview(seventhRule)
-        addSubview(seventhRuleButton)
+        
+        for i in 0...rulesTextArray.count - 1 {
+            if (i + 1 == 7) {
+                createRuleLabel(index: i, text: rulesTextArray[i], twoColored: true, textToColor: "“С Заданиями”")
+            } else {
+                createRuleLabel(index: i, text: rulesTextArray[i], twoColored: false, textToColor: "")
+            }
+            
+            createRuleIndexBtn(index: i)
+        }
+    }
+    
+    private func createRuleLabel(index: Int, text: String, twoColored: Bool, textToColor: String) {
+        rulesLabelArray.append(UILabel(
+            text: text,
+            font: UIFont.delaGothicOneRegular16()!,
+            color: .blackColor
+        ))
+        rulesLabelArray[index].numberOfLines = 0
+        rulesLabelArray[index].textAlignment = .center
+        
+        if twoColored {
+            let string = NSMutableAttributedString(string: text)
+            string.setColorForText(textToColor, with: .purpleColor)
+            rulesLabelArray[index].attributedText = string
+        }
+        
+        addSubview(rulesLabelArray[index])
+    }
+    
+    private func createRuleIndexBtn(index: Int) {
+        rulesIndexBtnArray.append(UIButton(type: .system))
+        rulesIndexBtnArray[index].layer.borderWidth = 1
+        rulesIndexBtnArray[index].layer.borderColor = UIColor.blackColor.cgColor
+        rulesIndexBtnArray[index].titleLabel?.font = UIFont.delaGothicOneRegular12()
+        rulesIndexBtnArray[index].tintColor = .yellowColor
+        rulesIndexBtnArray[index].backgroundColor = .purpleColor
+        rulesIndexBtnArray[index].layer.cornerRadius = 15
+        rulesIndexBtnArray[index].setTitle("\(index + 1)", for: .normal)
+        rulesIndexBtnArray[index].translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(rulesIndexBtnArray[index])
     }
 }
 
@@ -205,80 +104,80 @@ extension RulesView {
             rulesLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             rulesLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
         
-            firstRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            firstRule.topAnchor.constraint(equalTo: rulesLabel.bottomAnchor, constant: 0),
-            firstRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            firstRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[0].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[0].topAnchor.constraint(equalTo: rulesLabel.bottomAnchor, constant: 0),
+            rulesLabelArray[0].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[0].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            firstRuleButton.topAnchor.constraint(equalTo: firstRule.topAnchor, constant: -2),
-            firstRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            firstRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            firstRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[0].topAnchor.constraint(equalTo: rulesLabelArray[0].topAnchor, constant: -2),
+            rulesIndexBtnArray[0].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[0].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[0].widthAnchor.constraint(equalToConstant: 31),
             
-            secondRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            secondRule.topAnchor.constraint(equalTo: firstRule.bottomAnchor, constant: 20),
-            secondRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            secondRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[1].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[1].topAnchor.constraint(equalTo: rulesLabelArray[0].bottomAnchor, constant: 20),
+            rulesLabelArray[1].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[1].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            secondRuleButton.topAnchor.constraint(equalTo: secondRule.topAnchor, constant: -2),
-            secondRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            secondRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            secondRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[1].topAnchor.constraint(equalTo: rulesLabelArray[1].topAnchor, constant: -2),
+            rulesIndexBtnArray[1].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[1].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[1].widthAnchor.constraint(equalToConstant: 31),
             
             startGameButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            startGameButton.topAnchor.constraint(equalTo: secondRule.bottomAnchor, constant: 10),
+            startGameButton.topAnchor.constraint(equalTo: rulesLabelArray[1].bottomAnchor, constant: 10),
             startGameButton.heightAnchor.constraint(equalToConstant: 30),
             startGameButton.widthAnchor.constraint(equalToConstant: 110),
             
-            thirdRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            thirdRule.topAnchor.constraint(equalTo: startGameButton.bottomAnchor, constant: 20),
-            thirdRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            thirdRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[2].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[2].topAnchor.constraint(equalTo: startGameButton.bottomAnchor, constant: 20),
+            rulesLabelArray[2].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[2].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            thirdRuleButton.topAnchor.constraint(equalTo: thirdRule.topAnchor, constant: -2),
-            thirdRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            thirdRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            thirdRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[2].topAnchor.constraint(equalTo: rulesLabelArray[2].topAnchor, constant: -2),
+            rulesIndexBtnArray[2].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[2].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[2].widthAnchor.constraint(equalToConstant: 31),
             
-            fourthRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            fourthRule.topAnchor.constraint(equalTo: thirdRule.bottomAnchor, constant: 20),
-            fourthRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            fourthRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[3].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[3].topAnchor.constraint(equalTo: rulesLabelArray[2].bottomAnchor, constant: 20),
+            rulesLabelArray[3].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[3].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            fourthRuleButton.topAnchor.constraint(equalTo: fourthRule.topAnchor, constant: -2),
-            fourthRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            fourthRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            fourthRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[3].topAnchor.constraint(equalTo: rulesLabelArray[3].topAnchor, constant: -2),
+            rulesIndexBtnArray[3].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[3].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[3].widthAnchor.constraint(equalToConstant: 31),
             
-            fifthRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            fifthRule.topAnchor.constraint(equalTo: fourthRule.bottomAnchor, constant: 20),
-            fifthRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            fifthRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[4].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[4].topAnchor.constraint(equalTo: rulesLabelArray[3].bottomAnchor, constant: 20),
+            rulesLabelArray[4].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[4].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            fifthRuleButton.topAnchor.constraint(equalTo: fifthRule.topAnchor, constant: -2),
-            fifthRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            fifthRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            fifthRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[4].topAnchor.constraint(equalTo: rulesLabelArray[4].topAnchor, constant: -2),
+            rulesIndexBtnArray[4].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[4].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[4].widthAnchor.constraint(equalToConstant: 31),
             
-            sixthRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            sixthRule.topAnchor.constraint(equalTo: fifthRule.bottomAnchor, constant: 20),
-            sixthRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            sixthRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[5].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[5].topAnchor.constraint(equalTo: rulesLabelArray[4].bottomAnchor, constant: 20),
+            rulesLabelArray[5].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[5].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            sixthRuleButton.topAnchor.constraint(equalTo: sixthRule.topAnchor, constant: -2),
-            sixthRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            sixthRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            sixthRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[5].topAnchor.constraint(equalTo: rulesLabelArray[5].topAnchor, constant: -2),
+            rulesIndexBtnArray[5].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[5].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[5].widthAnchor.constraint(equalToConstant: 31),
             
-            seventhRule.centerXAnchor.constraint(equalTo: centerXAnchor),
-            seventhRule.topAnchor.constraint(equalTo: sixthRule.bottomAnchor, constant: 20),
-            seventhRule.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            seventhRule.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            rulesLabelArray[6].centerXAnchor.constraint(equalTo: centerXAnchor),
+            rulesLabelArray[6].topAnchor.constraint(equalTo: rulesLabelArray[5].bottomAnchor, constant: 20),
+            rulesLabelArray[6].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            rulesLabelArray[6].trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
-            seventhRuleButton.topAnchor.constraint(equalTo: seventhRule.topAnchor, constant: -2),
-            seventhRuleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            seventhRuleButton.heightAnchor.constraint(equalToConstant: 31),
-            seventhRuleButton.widthAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[6].topAnchor.constraint(equalTo: rulesLabelArray[6].topAnchor, constant: -2),
+            rulesIndexBtnArray[6].leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            rulesIndexBtnArray[6].heightAnchor.constraint(equalToConstant: 31),
+            rulesIndexBtnArray[6].widthAnchor.constraint(equalToConstant: 31),
         ])
     }
     
