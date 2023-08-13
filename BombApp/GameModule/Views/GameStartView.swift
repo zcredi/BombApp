@@ -1,10 +1,3 @@
-//
-//  GameStartView.swift
-//  BombApp
-//
-//  Created by Evgenii Mazrukho on 07.08.2023.
-//
-
 import UIKit
 
 class GameStartView: UIView {

@@ -1,10 +1,8 @@
 import UIKit
 
-
-
 class CategoryViewController: UIViewController {
-    var question = Question()
-   
+    
+    private var question = Question()
     private let text: [String] = ["О Разном", "Спорт и Хобби", "Про Жизнь", "Знаменитости", "Исскуство и Кино", "Природа"]
     private let image: [UIImage] = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!, UIImage(named: "image6")!]
     private var selectedItems: [String] = []

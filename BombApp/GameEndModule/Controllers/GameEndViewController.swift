@@ -2,7 +2,7 @@ import UIKit
 
 class GameEndViewController: UIViewController {
     
-    var penalties = Question()
+    private var penalties = Question()
     private lazy var gameEndView = GameEndView(showQuest: showQuest)
     private var showQuest = false
     
