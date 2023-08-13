@@ -62,7 +62,6 @@ class SettingsViewController: UIViewController {
         let segment = UISegmentedControl(items: ["Короткое", "Среднее", "Длинное", "Случайное"])
         segment.selectedSegmentIndex = 0
         segment.selectedSegmentTintColor = .purpleColor
-        
         return segment
     }()
     

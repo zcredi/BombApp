@@ -53,7 +53,7 @@ class CategoryViewController: UIViewController {
         collectionView.reloadData()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         let selectedCategories = selectedItems
         UserDefaults.standard.set(selectedCategories, forKey: "selectedCategories")

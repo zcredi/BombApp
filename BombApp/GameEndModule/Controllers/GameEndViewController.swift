@@ -20,7 +20,10 @@ class GameEndViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UserDefaults.standard.set(false, forKey: "IsThereActivePlay")
+    }
     private func updateUI() {
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
         view.addSubview(gameEndView)
