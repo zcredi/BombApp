@@ -4,13 +4,14 @@ class GameViewController: UIViewController {
     
     private let mainViewController = MainViewController()
     private let questLogic = QuestLogic()
-    var question = Question()
-    var arrayQuestions = [String]()
+    private var isStartButtonPressed: Bool = false
     let gameStartView = GameStartView()
     var questModel = QuestModel()
-    var currentQuestion: String = ""
+    
     var isContinueButtonPressed: Bool = false
     var isPlayMusic = true
+    var currentQuestion: String = ""
+    
     
     var timer: Timer?
     var count = 15
@@ -24,18 +25,19 @@ class GameViewController: UIViewController {
         updateUI()
         setConstraints()
         setupNavigationBar()
-        question.generateQuestions()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
-            arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as? [String] ?? []
-            isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
-            let gameTime = UserDefaults.standard.integer(forKey: "GameTime")
-            count = gameTime > 0 ? gameTime : 15
-            arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
-
+        isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+        let gameTime = UserDefaults.standard.integer(forKey: "GameTime")
+        count = gameTime > 0 ? gameTime : 15
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        currentQuestion = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
     }
     
     private func updateUI() {
@@ -60,7 +62,6 @@ class GameViewController: UIViewController {
     
     
     @objc func stopOrResumeGame() {
-        print("Game stop/resume")
         if isPaused {
             timer?.invalidate()
             questLogic.pauseSounds()
@@ -69,27 +70,26 @@ class GameViewController: UIViewController {
             gameStartView.gameLabel.text = "Пауза"
         } else {
             createTimer()
+            let currentQuestionInGame = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+            currentQuestion = currentQuestionInGame
             gameStartView.gameLabel.text = currentQuestion
+            
             isPaused = true
             if isPlayMusic{
                 questLogic.playBackgroundSound()
             }
             gameStartView.startButton.isHidden = true
             gameStartView.bombImageView.isHidden = true
-
             questModel.playAnimationView()
             addAnimationViewOnScreen()
-            
         }
     }
     
     @objc func startButtonPressed() {
+        UserDefaults.standard.set(true, forKey: "IsThereActivePlay")
+        isStartButtonPressed = true
         navigationItem.rightBarButtonItem?.isEnabled = true
-        print("button is hidden and title changed")
         gameStartView.startButton.isHidden = true
-        
-        currentQuestion = arrayQuestions.randomElement() ?? "None"
-        UserDefaults.standard.set(currentQuestion, forKey: "CurrentQuestion")
         gameStartView.gameLabel.text = currentQuestion
         if gameStartView.startButton.isHidden {
             gameStartView.bombImageView.isHidden = true
@@ -103,7 +103,7 @@ class GameViewController: UIViewController {
             if isPlayMusic{
                 questLogic.playBackgroundSound()
             }
-            
+
         }
         
     }
@@ -115,6 +115,7 @@ class GameViewController: UIViewController {
     @objc private func updateTimer() {
         if count != 0 {
             count -= 1
+            print(count)
             passedSeconds += 1
         } else {
             timer?.invalidate()
