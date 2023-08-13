@@ -13,13 +13,8 @@ class GameViewController: UIViewController {
     var isPlayMusic = true
     
     var timer: Timer?
-    var count = 15{
-        didSet{
-            if count < 15{
-                count = 15
-            }
-        }
-    }
+    var count = 15
+    
     
     private var passedSeconds = 0
     var isPaused = true
@@ -34,10 +29,13 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
-        arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as? [String] ?? []
-        isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
-        count = UserDefaults.standard.integer(forKey: "GameTime") as? Int ?? 15
-        arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
+            arrayQuestions = UserDefaults.standard.array(forKey: "selectedCategories") as? [String] ?? []
+            isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+            let gameTime = UserDefaults.standard.integer(forKey: "GameTime")
+            count = gameTime > 0 ? gameTime : 15
+            arrayQuestions = question.getCurrentCategory(category: arrayQuestions)
+
+        
     }
     
     private func updateUI() {
