@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  BombApp
-//
-//  Created by Владислав on 07.08.2023.
-//
-
 import UIKit
 
 @main
