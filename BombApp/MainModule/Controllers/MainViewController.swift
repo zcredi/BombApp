@@ -117,12 +117,13 @@ class MainViewController: UIViewController {
     
     @objc func continueButtonPressed() {
         
-        let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as? Bool ?? true
-        let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as? String ?? ""
-        let gameVC = GameViewController()
-        gameVC.questModel.createAnimationView()
-        gameVC.isPlayMusic = playSound
+       
         if isStartButtonPressed {
+            let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+            let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+            let gameVC = GameViewController()
+            gameVC.questModel.createAnimationView()
+            gameVC.isPlayMusic = playSound
             let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int 
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
