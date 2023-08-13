@@ -10,11 +10,11 @@
 
 ## Для вас старались:
 
-[zcredi](https://github.com/zcredi)
-[fullzoom59](https://github.com/fullzoom59)
-[Bruzya](https://github.com/Bruzya)
-[AryaDarisova](https://github.com/AryaDarisova)
-[shatoman](https://github.com/shatoman)
-[RahatIscs1903k](https://github.com/RahatIscs1903k)
+[zcredi](https://github.com/zcredi)</br>
+[fullzoom59](https://github.com/fullzoom59)</br>
+[Bruzya](https://github.com/Bruzya)</br>
+[AryaDarisova](https://github.com/AryaDarisova)</br>
+[shatoman](https://github.com/shatoman)</br>
+[RahatIscs1903k](https://github.com/RahatIscs1903k)</br>
 
 ![Запись экрана 2023-08-13 в 12 50 16](https://github.com/zcredi/BombApp/assets/107634092/17fbb49a-9966-4c2e-be2b-9e4a86521075)
