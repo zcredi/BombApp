@@ -10,11 +10,15 @@ import UIKit
 extension UIViewController {
     
     func createCustomNavigationBar() {
-        
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 1.00)
-        navigationController?.navigationBar.topItem?.title = " " //some kind of magic remove back arrow btn title O_o
+            if #available(iOS 15.0, *) {
+                navigationController?.navigationBar.isTranslucent = true
+                navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                navigationController?.navigationBar.shadowImage = UIImage()
+                navigationController?.navigationBar.tintColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 1.00)
+                navigationController?.navigationBar.topItem?.title = " " //some kind of magic remove back arrow btn title O_o
+        }
     }
+
     
     func createCustomTitleView(sceneTitle: String) -> UIView {
         
