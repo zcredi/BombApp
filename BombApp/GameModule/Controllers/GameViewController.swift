@@ -1,11 +1,12 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    private let mainViewController = MainViewController()
+    private let questLogic = QuestLogic()
     var question = Question()
     var arrayQuestions = [String]()
     let gameStartView = GameStartView()
-    private let mainViewController = MainViewController()
-    private let questLogic = QuestLogic()
     var questModel = QuestModel()
     var currentQuestion: String = ""
     var isContinueButtonPressed: Bool = false
@@ -46,7 +47,6 @@ class GameViewController: UIViewController {
     private func setupNavigationBar() {
         createCustomNavigationBar()
         let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
-        
         let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
         navigationItem.titleView = sceneTitleView
         navigationItem.rightBarButtonItems = [gameStopButton]
@@ -88,7 +88,6 @@ class GameViewController: UIViewController {
         gameStartView.gameLabel.text = currentQuestion
         if gameStartView.startButton.isHidden {
             gameStartView.bombImageView.isHidden = true
-            
             let sceneTitleView = createCustomTitleView(sceneTitle: "Игра")
             let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
             navigationItem.titleView = sceneTitleView
@@ -118,7 +117,9 @@ class GameViewController: UIViewController {
             navigationController?.pushViewController(GameEndViewController(), animated: true)
             questModel.stopAnimationView()
             deleteAnimationView()
-            questLogic.playBlastSound()
+            if isPlayMusic{
+                questLogic.playBlastSound()
+            }
         }
     }
         

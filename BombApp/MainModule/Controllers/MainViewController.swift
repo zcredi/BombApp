@@ -1,7 +1,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    var isStartButtonPressed: Bool = false
+    private var isStartButtonPressed: Bool = false
     
     private var categoryCount = [String]()
     private var questModel = QuestModel()
@@ -56,7 +56,6 @@ class MainViewController: UIViewController {
         button.setTitle("?", for: .normal)
         button.addTarget(self, action: #selector(rulesButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-            
         return button
     }()
     
@@ -130,7 +129,6 @@ class MainViewController: UIViewController {
             gameVC.currentQuestion = gameLabelText
             gameVC.gameStartView.gameLabel.text = gameLabelText
             gameVC.count = secondsCount
-            
             navigationController?.pushViewController(gameVC, animated: true)
         }else{
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "У вас сейчас нету активной игры")

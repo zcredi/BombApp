@@ -167,7 +167,7 @@ class SettingsViewController: UIViewController {
     }()
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        var segmentedIndex = UserDefaults.standard.integer(forKey: "GameTime")
+        let segmentedIndex = UserDefaults.standard.integer(forKey: "GameTime")
         switch segmentedIndex{
             case 15: segmentedGame.selectedSegmentIndex = 0
             case 30: segmentedGame.selectedSegmentIndex = 1
@@ -213,9 +213,7 @@ class SettingsViewController: UIViewController {
         
     }
     @IBAction func switchValueChanged(_ sender: UISwitch){
-        
-        var value = sender.isOn
-        print(value)
+        let value = sender.isOn
         switch sender.tag{
             case 0: UserDefaults.standard.set(value, forKey: "gameWithChallenge")
             case 1: UserDefaults.standard.set(value, forKey: "gameWithMusic")
