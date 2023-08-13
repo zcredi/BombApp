@@ -93,7 +93,7 @@ class MainViewController: UIViewController {
     
     @objc func startGameButtonTapped(_ sender: UIButton) {
         isStartButtonPressed = true
-        categoryCount = UserDefaults.standard.array(forKey: "selectedCategories") as! [String]
+        categoryCount = UserDefaults.standard.array(forKey: "selectedCategories") as? [String] ?? []
         if categoryCount.isEmpty {
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "Выберите минимум одну категорию для начала игры")
             alertController.modalPresentationStyle = .overCurrentContext
@@ -116,13 +116,14 @@ class MainViewController: UIViewController {
     }
     
     @objc func continueButtonPressed() {
-        let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
-        let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
-        let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
+        
+        let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as? Bool ?? true
+        let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as? String ?? ""
         let gameVC = GameViewController()
         gameVC.questModel.createAnimationView()
         gameVC.isPlayMusic = playSound
         if isStartButtonPressed {
+            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int 
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
             gameVC.stopOrResumeGame()
