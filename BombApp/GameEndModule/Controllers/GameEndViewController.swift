@@ -32,7 +32,7 @@ class GameEndViewController: UIViewController {
         categoreView.textColor = .purpleColor
         categoreView.font = UIFont(name: "DelaGothicOne-Regular", size: 30)
         self.navigationItem.titleView = categoreView
-        let gameStopButton = createCustomButton(selector: #selector(stopOrResumeGame))
+        _ = createCustomButton(selector: #selector(stopOrResumeGame))
     }
     
     @objc func stopOrResumeGame() {
