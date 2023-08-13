@@ -1,10 +1,21 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    private var isStartButtonPressed: Bool = false
-    
-    private var categoryCount = [String]()
+    private var question = Question()
     private var questModel = QuestModel()
+    private var questionArray: [String] = []
+    private var categoryCount = [String]()
+    private var isStartButtonPressed: Bool = false
+    private var currentQuestion: String = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        question.generateQuestions()
+        if let arrayItem = UserDefaults.standard.array(forKey: "selectedCategories") as? [String]{
+            questionArray = arrayItem
+        }
+        questionArray = question.getCurrentCategory(category: questionArray)
+    }
     
     private lazy var bombImageView: UIImageView = {
         let imageView = UIImageView()
@@ -23,7 +34,12 @@ class MainViewController: UIViewController {
     }()
     
     
-    private lazy var continueButton = PurpleButton(text: "Продолжить")
+    private lazy var continueButton: PurpleButton = {
+        let button = PurpleButton(text: "Продолжить")
+        button.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     private lazy var categoryButton: PurpleButton = {
         let button = PurpleButton(text: "Категории")
@@ -84,24 +100,23 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradientBackground(topColor: UIColor.yellow, bottomColor: UIColor.orange)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
         setConstraints()
     }
     
+    
     @objc func startGameButtonTapped(_ sender: UIButton) {
-        isStartButtonPressed = true
         categoryCount = UserDefaults.standard.array(forKey: "selectedCategories") as? [String] ?? []
-        if categoryCount.isEmpty {
+            if questionArray.isEmpty{
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "Выберите минимум одну категорию для начала игры")
             alertController.modalPresentationStyle = .overCurrentContext
             alertController.modalTransitionStyle = .crossDissolve
             self.present(alertController, animated: true)
         } else {
+            currentQuestion = questionArray.randomElement()!
+            UserDefaults.standard.set(currentQuestion, forKey: "CurrentQuestion")
             let vc = GameViewController()
             navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
@@ -116,21 +131,22 @@ class MainViewController: UIViewController {
     }
     
     @objc func continueButtonPressed() {
-        
-       
-        if isStartButtonPressed {
-            let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
-            let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+        var isThereActivePlay = UserDefaults.standard.bool(forKey: "IsThereActivePlay") as? Bool ?? false
+        if isThereActivePlay == true{
+            let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as? Bool ?? false
+            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
+            let currentQuestionInGame = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+            let gameLabelText = currentQuestion
             let gameVC = GameViewController()
             gameVC.questModel.createAnimationView()
             gameVC.isPlayMusic = playSound
-            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int 
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
             gameVC.stopOrResumeGame()
-            gameVC.currentQuestion = gameLabelText
-            gameVC.gameStartView.gameLabel.text = gameLabelText
+            gameVC.currentQuestion = currentQuestionInGame
+            gameVC.gameStartView.gameLabel.text = currentQuestionInGame
             gameVC.count = secondsCount
+            isStartButtonPressed = true
             navigationController?.pushViewController(gameVC, animated: true)
         }else{
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "У вас сейчас нету активной игры")
@@ -149,7 +165,6 @@ class MainViewController: UIViewController {
         view.addSubview(bombImageView)
         view.addSubview(startGameButton)
         view.addSubview(continueButton)
-        continueButton.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
         view.addSubview(categoryButton)
         view.addSubview(rulesButton)
         view.addSubview(settingsButton)
@@ -193,7 +208,6 @@ class MainViewController: UIViewController {
             settingsButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             settingsButton.heightAnchor.constraint(equalToConstant: 50),
             settingsButton.widthAnchor.constraint(equalTo: settingsButton.heightAnchor)
-            
         ])
     }
 }
