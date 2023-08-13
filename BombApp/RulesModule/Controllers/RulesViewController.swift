@@ -4,7 +4,11 @@ class RulesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 //    private let rulesView = RulesView()
 //    private let categoryRulesView = CategoryRulesView()
-    private let arrayOfViews = [RulesView(), CategoryRulesView()]
+    private let arrayOfViews: [UIView] = {
+            let views = [RulesView(), CategoryRulesView(), SettingsView()]
+            views.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+            return views
+    }()
     private var myTableView = UITableView()
     let identifireForViews = "MyCell"
     
