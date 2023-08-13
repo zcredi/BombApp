@@ -117,19 +117,20 @@ class MainViewController: UIViewController {
     }
     
     @objc func continueButtonPressed() {
+        let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
+        let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
+        let playSound = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
         let gameVC = GameViewController()
         gameVC.questModel.createAnimationView()
-        
+        gameVC.isPlayMusic = playSound
         if isStartButtonPressed {
-            
-            let gameLabelText = UserDefaults.standard.string(forKey: "CurrentQuestion") as! String
-            let secondsCount = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
             gameVC.isContinueButtonPressed = true
             gameVC.isPaused = false
             gameVC.stopOrResumeGame()
             gameVC.currentQuestion = gameLabelText
             gameVC.gameStartView.gameLabel.text = gameLabelText
             gameVC.count = secondsCount
+            
             navigationController?.pushViewController(gameVC, animated: true)
         }else{
             let alertController = CustomAlertController(image: UIImage(named: "applicationLogo") ?? .add, title: "Ошибка", message: "У вас сейчас нету активной игры")

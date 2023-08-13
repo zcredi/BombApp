@@ -1,25 +1,24 @@
-//
-//  GameEndViewController.swift
-//  BombApp
-//
-//  Created by Владислав on 07.08.2023.
-//
-
 import UIKit
 
 class GameEndViewController: UIViewController {
     
     var penalties = Question()
-    private let gameEndView = GameEndView()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        
+    private lazy var gameEndView = GameEndView(showQuest: showQuest)
+    private var showQuest = false
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        showQuest = UserDefaults.standard.bool(forKey: "gameWithChallenge") as! Bool
         updateUI()
         setConstraints()
         setupNavigationBar()
         penalties.generatePunishments()
         nextQuestButtonPressed()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
     }
     
     private func updateUI() {

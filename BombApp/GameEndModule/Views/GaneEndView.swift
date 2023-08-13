@@ -1,10 +1,3 @@
-//
-//  GaneEndView.swift
-//  BombApp
-//
-//  Created by fullzoom on 09.08.2023.
-//
-
 import UIKit
 
 class GameEndView: UIView {
@@ -13,11 +6,11 @@ class GameEndView: UIView {
                                        font: .delaGothicOneRegular24(),
                                        color: .blackColor)
     let questLabel = UILabel(text: "В следующем раунде после каждого ответа хлопать в ладоши",
-                                     font: .delaGothicOneRegular20(),
-                                     color: .purpleColor)
+                             font: .delaGothicOneRegular20(),
+                             color: .purpleColor)
     
     private let explosionImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "explosion")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -26,7 +19,19 @@ class GameEndView: UIView {
     lazy var nextQuestButton = PurpleButton(text: "Другое задание")
     lazy var repeatButton = PurpleButton(text: "Начать заного")
     
+    private var showQuest: Bool = true
+    
+    // Существующий инициализатор
     override init(frame: CGRect) {
+        super.init(frame: .zero)
+        
+        updateUI()
+        setConstraints()
+    }
+    
+    // Новый инициализатор
+    init(showQuest: Bool) {
+        self.showQuest = showQuest
         super.init(frame: .zero)
         
         updateUI()
@@ -42,17 +47,19 @@ class GameEndView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(warningLabel)
         addSubview(explosionImageView)
-        questLabel.shadowColor = .blackColor
-        questLabel.shadowOffset = CGSize(width: -0.5, height: -0.5)
-        addSubview(questLabel)
-        addSubview(nextQuestButton)
-        nextQuestButton.addTarget(nil, action: #selector(GameEndViewController.nextQuestButtonPressed), for: .touchUpInside)
+        
+        if showQuest {
+            questLabel.shadowColor = .blackColor
+            questLabel.shadowOffset = CGSize(width: -0.5, height: -0.5)
+            addSubview(questLabel)
+            addSubview(nextQuestButton)
+            nextQuestButton.addTarget(nil, action: #selector(GameEndViewController.nextQuestButtonPressed), for: .touchUpInside)
+        }
+        
         addSubview(repeatButton)
         repeatButton.addTarget(nil, action: #selector(GameEndViewController.repeatButtonPressed), for: .touchUpInside)
     }
-}
-
-extension GameEndView {
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
@@ -65,21 +72,24 @@ extension GameEndView {
             explosionImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             explosionImageView.topAnchor.constraint(equalTo: warningLabel.bottomAnchor, constant: 30),
             
-            questLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            questLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            questLabel.topAnchor.constraint(equalTo: explosionImageView.bottomAnchor, constant: 20),
-            
-            nextQuestButton.heightAnchor.constraint(equalToConstant: 80),
-            nextQuestButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            nextQuestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            nextQuestButton.bottomAnchor.constraint(equalTo: repeatButton.topAnchor, constant: -15),
-            
             repeatButton.heightAnchor.constraint(equalToConstant: 80),
             repeatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             repeatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             repeatButton.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            
         ])
+        
+        if showQuest {
+            NSLayoutConstraint.activate([
+                questLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+                questLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+                questLabel.topAnchor.constraint(equalTo: explosionImageView.bottomAnchor, constant: 20),
+                
+                nextQuestButton.heightAnchor.constraint(equalToConstant: 80),
+                nextQuestButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+                nextQuestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+                nextQuestButton.bottomAnchor.constraint(equalTo: repeatButton.topAnchor, constant: -15),
+            ])
+        }
     }
 }
