@@ -16,6 +16,7 @@
 		401783272A850B7100A9398D /* Наказания.txt in Resources */ = {isa = PBXBuildFile; fileRef = 401783262A850B7100A9398D /* Наказания.txt */; };
 		40DB97052A83F90C008EE64F /* GaneEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB97042A83F90C008EE64F /* GaneEndView.swift */; };
 		40F883A62A86C56E00B951F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F883A52A86C56E00B951F3 /* SettingsViewController.swift */; };
+		40F883A82A88CCF500B951F3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F883A72A88CCF500B951F3 /* SettingsView.swift */; };
 		5272EC5C2A84CD4600075360 /* heartBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC592A84CD4600075360 /* heartBeat.wav */; };
 		5272EC5D2A84CD4600075360 /* wick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5A2A84CD4600075360 /* wick.wav */; };
 		5272EC5E2A84CD4600075360 /* blast.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5272EC5B2A84CD4600075360 /* blast.wav */; };
@@ -62,6 +63,7 @@
 		401783262A850B7100A9398D /* Наказания.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Наказания.txt"; sourceTree = "<group>"; };
 		40DB97042A83F90C008EE64F /* GaneEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaneEndView.swift; sourceTree = "<group>"; };
 		40F883A52A86C56E00B951F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		40F883A72A88CCF500B951F3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5272EC592A84CD4600075360 /* heartBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heartBeat.wav; sourceTree = "<group>"; };
 		5272EC5A2A84CD4600075360 /* wick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wick.wav; sourceTree = "<group>"; };
 		5272EC5B2A84CD4600075360 /* blast.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blast.wav; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				E772CD002A87088E00088275 /* CategoryRulesView.swift */,
 				E772CCFE2A86E20B00088275 /* RulesView.swift */,
+				40F883A72A88CCF500B951F3 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				867B18522A83D18200F7CAAA /* QuestionBrain.swift in Sources */,
 				868D16092A80DE7400C6D712 /* UIColor+App.swift in Sources */,
 				867B186B2A83D7C600F7CAAA /* UIView+App.swift in Sources */,
+				40F883A82A88CCF500B951F3 /* SettingsView.swift in Sources */,
 				868D16062A80DD8E00C6D712 /* RulesViewController.swift in Sources */,
 				867B18752A83D98500F7CAAA /* GameStartView.swift in Sources */,
 				867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */,
