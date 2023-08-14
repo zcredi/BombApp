@@ -26,7 +26,6 @@
 		529BD76F2A830DF30047DCC6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 529BD76E2A830DF30047DCC6 /* Lottie */; };
 		529BD7732A83B81F0047DCC6 /* QuestLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BD7722A83B81F0047DCC6 /* QuestLogic.swift */; };
 		867B18522A83D18200F7CAAA /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18502A83D18200F7CAAA /* QuestionBrain.swift */; };
-		867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */; };
 		867B18552A83D1AE00F7CAAA /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */; };
 		867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */; };
 		867B185B2A83D79200F7CAAA /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B185A2A83D79200F7CAAA /* GameEndViewController.swift */; };
@@ -72,7 +71,6 @@
 		529BD76B2A82FF690047DCC6 /* QuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestModel.swift; sourceTree = "<group>"; };
 		529BD7722A83B81F0047DCC6 /* QuestLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestLogic.swift; sourceTree = "<group>"; };
 		867B18502A83D18200F7CAAA /* QuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
-		867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperQuestionBrain.swift; sourceTree = "<group>"; };
 		867B18542A83D1AE00F7CAAA /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		867B18562A83D34500F7CAAA /* CustomAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		867B185A2A83D79200F7CAAA /* GameEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				867B18502A83D18200F7CAAA /* QuestionBrain.swift */,
-				867B18512A83D18200F7CAAA /* HelperQuestionBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -532,7 +529,6 @@
 				867B18572A83D34500F7CAAA /* CustomAlertViewController.swift in Sources */,
 				E772CD012A87088E00088275 /* CategoryRulesView.swift in Sources */,
 				868D15FE2A80DD4E00C6D712 /* MainViewController.swift in Sources */,
-				867B18532A83D18200F7CAAA /* HelperQuestionBrain.swift in Sources */,
 				867B186A2A83D7C600F7CAAA /* UIStackView+App.swift in Sources */,
 				40F883A62A86C56E00B951F3 /* SettingsViewController.swift in Sources */,
 				867B18622A83D7A600F7CAAA /* BackgroundColor.swift in Sources */,

@@ -31,8 +31,7 @@ class GameViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem?.isEnabled = isContinueButtonPressed
         isPlayMusic = UserDefaults.standard.bool(forKey: "gameWithMusic") as! Bool
-        let gameTime = UserDefaults.standard.integer(forKey: "GameTime")
-        count = gameTime > 0 ? gameTime : 15
+        count = UserDefaults.standard.integer(forKey: "SecondsCount") as! Int
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +85,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func startButtonPressed() {
+        count = UserDefaults.standard.integer(forKey: "GameTime") as! Int
         UserDefaults.standard.set(true, forKey: "IsThereActivePlay")
         isStartButtonPressed = true
         navigationItem.rightBarButtonItem?.isEnabled = true
